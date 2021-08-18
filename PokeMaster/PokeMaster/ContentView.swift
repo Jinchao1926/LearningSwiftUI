@@ -2,15 +2,14 @@
 //  ContentView.swift
 //  PokeMaster
 //
-//  Created by 林锦超 on 2021/8/17.
+//  Created by 林锦超 on 2021/8/18.
 //
 
 import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        PokemonInfoRow()
     }
 }
 
