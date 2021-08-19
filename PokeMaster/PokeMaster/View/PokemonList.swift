@@ -1,0 +1,35 @@
+//
+//  PokemonList.swift
+//  PokeMaster
+//
+//  Created by 林锦超 on 2021/8/19.
+//
+
+import SwiftUI
+
+struct PokemonList: View {
+    @State var expandingIndex: Int?
+    
+    var body: some View {
+        
+        // cell 自带分割线
+//        List(PokemonViewModel.all) { pokemon in
+//            PokemonInfoRow(model: pokemon)
+//        }
+        
+        
+        // ScrollView 没有 cell 重用机制
+        ScrollView {
+            LazyVStack {
+                ForEach(PokemonViewModel.all) { pokemon in
+                    PokemonInfoRow(model: pokemon, expand: expandingIndex == pokemon.id)
+                        .onTapGesture {
+                            withAnimation {
+                                expandingIndex = (expandingIndex == pokemon.id) ? nil : pokemon.id
+                            }
+                        }
+                }
+            }
+        }
+    }
+}
