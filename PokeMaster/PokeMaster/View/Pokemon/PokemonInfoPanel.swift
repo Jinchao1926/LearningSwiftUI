@@ -12,12 +12,29 @@ struct PokemonInfoPanel: View {
     
     var ability: [AbilityViewModel] { AbilityViewModel.sample(pokemonID: model.id) }
     
+    @State var darkstyle: Bool = false
+    
     var body: some View {
         VStack(spacing: 20) {
+            /*
+            Button(action: {
+                darkstyle.toggle()
+            }, label: {
+                Text("切换模糊效果")
+            }) */
+            
             topIndicator
             header(model: model)
             pokemonDescription
+            Divider()
+            AbilityList(model: model, abilityModels: ability)
         }
+        .padding(EdgeInsets(top: 12, leading: 30, bottom: 30, trailing: 30))
+        .blurBackground(style: darkstyle ? .systemMaterialDark : .systemMaterial)
+//        .background(Color.white)
+//        .blur(radius: 0)
+        .cornerRadius(20)
+        .fixedSize(horizontal: false, vertical: /*@START_MENU_TOKEN@*/true/*@END_MENU_TOKEN@*/)
     }
     
     var topIndicator: some View {
@@ -35,7 +52,11 @@ struct PokemonInfoPanel: View {
 
 struct PokemonInfoPanel_Previews: PreviewProvider {
     static var previews: some View {
-        PokemonInfoPanel(model: .sample(id: 1))
+        VStack {
+            Spacer()
+            PokemonInfoPanel(model: .sample(id: 1))
+        }
+        .edgesIgnoringSafeArea(.bottom)
     }
 }
 
@@ -123,6 +144,33 @@ extension PokemonInfoPanel {
                 }
                 
             }
+        }
+    }
+}
+
+extension PokemonInfoPanel {
+    struct AbilityList: View {
+        let model: PokemonViewModel
+        let abilityModels: [AbilityViewModel]?
+        
+        var body: some View {
+            VStack(alignment: .leading, spacing: 12) {
+                Text("技能")
+                    .font(.headline)
+                    .fontWeight(.bold)
+                if abilityModels != nil {
+                    ForEach(abilityModels!) { ability in
+                        Text(ability.name)
+                            .font(.subheadline)
+                            .foregroundColor(self.model.color)
+                        Text(ability.descriptionText)
+                            .font(.footnote)
+                            .foregroundColor(Color(hex: 0xAAAAAA))
+                            .fixedSize(horizontal: false, vertical: true)
+                    }
+                }
+            }
+            .frame(maxWidth: .infinity, alignment: .leading)
         }
     }
 }
