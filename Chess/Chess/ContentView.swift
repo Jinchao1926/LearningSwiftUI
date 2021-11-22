@@ -22,11 +22,11 @@ struct ContentView: View {
             }.padding()
             
             VStack(alignment:.leading) {
-                Text("Current Step: \(model.currentSetp.rawValue)")
+                Text("Current Step: \(model.currentSetp.title)")
                     .font(.system(size: 24))
                 
                 if let winner = model.winner {
-                    Text("Winner: \(winner.rawValue)")
+                    Text("Winner: \(winner.title)")
                         .font(.system(size: 24))
                 }
             }.padding()

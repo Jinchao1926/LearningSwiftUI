@@ -43,7 +43,7 @@ struct ChessRow: View {
     var body: some View {
         HStack(alignment: .center, spacing: 10) {
             ForEach(row.indices, id: \.self) { (idx) in
-                ChessButton(title: row[idx].rawValue) {
+                ChessButton(title: row[idx].title) {
                     model.playing(atRow: rowIndex, col: idx)
                 }.disabled(row[idx] != .empty)
             }
