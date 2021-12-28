@@ -1,0 +1,793 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		46E40BEB45390C782F3AFA8F /* Pods_Faker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 433FCF00BD944D12232927B4 /* Pods_Faker.framework */; };
+		59841491277A11AB00A4E858 /* PurchaseCategoryRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59841490277A11AB00A4E858 /* PurchaseCategoryRow.swift */; };
+		59841496277A128100A4E858 /* Users.plist in Resources */ = {isa = PBXBuildFile; fileRef = 59841494277A128100A4E858 /* Users.plist */; };
+		59841497277A128100A4E858 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59841495277A128100A4E858 /* UserModel.swift */; };
+		59841499277A16E200A4E858 /* PurchaseCategoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59841498277A16E200A4E858 /* PurchaseCategoryModel.swift */; };
+		5984149B277A1A8A00A4E858 /* PurchaseAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5984149A277A1A8A00A4E858 /* PurchaseAPI.swift */; };
+		5984149D277A1BF200A4E858 /* FakerNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5984149C277A1BF200A4E858 /* FakerNetwork.swift */; };
+		5984149F277A206B00A4E858 /* PurchaseCategoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5984149E277A206B00A4E858 /* PurchaseCategoryViewModel.swift */; };
+		598414A1277A23BD00A4E858 /* FakerResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 598414A0277A23BD00A4E858 /* FakerResponse.swift */; };
+		59CB205A2779A3FA00BD0400 /* FakerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59CB20592779A3FA00BD0400 /* FakerApp.swift */; };
+		59CB205C2779A3FA00BD0400 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59CB205B2779A3FA00BD0400 /* ContentView.swift */; };
+		59CB205E2779A3FC00BD0400 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 59CB205D2779A3FC00BD0400 /* Assets.xcassets */; };
+		59CB20612779A3FC00BD0400 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 59CB20602779A3FC00BD0400 /* Preview Assets.xcassets */; };
+		59CB206C2779A3FC00BD0400 /* FakerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59CB206B2779A3FC00BD0400 /* FakerTests.swift */; };
+		59CB20762779A3FC00BD0400 /* FakerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59CB20752779A3FC00BD0400 /* FakerUITests.swift */; };
+		59CB20782779A3FC00BD0400 /* FakerUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59CB20772779A3FC00BD0400 /* FakerUITestsLaunchTests.swift */; };
+		59CB20872779AD6200BD0400 /* PurchaseCategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59CB20862779AD6200BD0400 /* PurchaseCategoryView.swift */; };
+		59CB208E2779B3E500BD0400 /* Tester.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59CB208B2779B3E500BD0400 /* Tester.swift */; };
+		59CB20932779B3ED00BD0400 /* UserAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59CB20922779B3ED00BD0400 /* UserAPI.swift */; };
+		59CB2095277AE96900BD0400 /* PurchaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59CB2094277AE96900BD0400 /* PurchaseView.swift */; };
+		59CB2097277AEA0900BD0400 /* PurchaseRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59CB2096277AEA0900BD0400 /* PurchaseRow.swift */; };
+		59CB209B277AEC7300BD0400 /* FakerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59CB209A277AEC7300BD0400 /* FakerViewModel.swift */; };
+		59CB209D277AED2D00BD0400 /* AccountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59CB209C277AED2D00BD0400 /* AccountViewModel.swift */; };
+		59CB209F277AFCFA00BD0400 /* PurchaseHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59CB209E277AFCFA00BD0400 /* PurchaseHeader.swift */; };
+		59CB20A2277B02F800BD0400 /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59CB20A1277B02F800BD0400 /* ColorExtension.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		59CB20682779A3FC00BD0400 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 59CB204E2779A3FA00BD0400 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 59CB20552779A3FA00BD0400;
+			remoteInfo = Faker;
+		};
+		59CB20722779A3FC00BD0400 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 59CB204E2779A3FA00BD0400 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 59CB20552779A3FA00BD0400;
+			remoteInfo = Faker;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		433FCF00BD944D12232927B4 /* Pods_Faker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Faker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4C22CE5BF17D7BDAE75DE2C8 /* Pods-Faker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Faker.debug.xcconfig"; path = "Target Support Files/Pods-Faker/Pods-Faker.debug.xcconfig"; sourceTree = "<group>"; };
+		59841490277A11AB00A4E858 /* PurchaseCategoryRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseCategoryRow.swift; sourceTree = "<group>"; };
+		59841494277A128100A4E858 /* Users.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Users.plist; sourceTree = "<group>"; };
+		59841495277A128100A4E858 /* UserModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		59841498277A16E200A4E858 /* PurchaseCategoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseCategoryModel.swift; sourceTree = "<group>"; };
+		5984149A277A1A8A00A4E858 /* PurchaseAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseAPI.swift; sourceTree = "<group>"; };
+		5984149C277A1BF200A4E858 /* FakerNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakerNetwork.swift; sourceTree = "<group>"; };
+		5984149E277A206B00A4E858 /* PurchaseCategoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseCategoryViewModel.swift; sourceTree = "<group>"; };
+		598414A0277A23BD00A4E858 /* FakerResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakerResponse.swift; sourceTree = "<group>"; };
+		59CB20562779A3FA00BD0400 /* Faker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Faker.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		59CB20592779A3FA00BD0400 /* FakerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakerApp.swift; sourceTree = "<group>"; };
+		59CB205B2779A3FA00BD0400 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		59CB205D2779A3FC00BD0400 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		59CB20602779A3FC00BD0400 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		59CB20622779A3FC00BD0400 /* Faker.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Faker.entitlements; sourceTree = "<group>"; };
+		59CB20672779A3FC00BD0400 /* FakerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FakerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		59CB206B2779A3FC00BD0400 /* FakerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakerTests.swift; sourceTree = "<group>"; };
+		59CB20712779A3FC00BD0400 /* FakerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FakerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		59CB20752779A3FC00BD0400 /* FakerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakerUITests.swift; sourceTree = "<group>"; };
+		59CB20772779A3FC00BD0400 /* FakerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakerUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		59CB20862779AD6200BD0400 /* PurchaseCategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseCategoryView.swift; sourceTree = "<group>"; };
+		59CB208B2779B3E500BD0400 /* Tester.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tester.swift; sourceTree = "<group>"; };
+		59CB20922779B3ED00BD0400 /* UserAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserAPI.swift; sourceTree = "<group>"; };
+		59CB2094277AE96900BD0400 /* PurchaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseView.swift; sourceTree = "<group>"; };
+		59CB2096277AEA0900BD0400 /* PurchaseRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseRow.swift; sourceTree = "<group>"; };
+		59CB209A277AEC7300BD0400 /* FakerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakerViewModel.swift; sourceTree = "<group>"; };
+		59CB209C277AED2D00BD0400 /* AccountViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountViewModel.swift; sourceTree = "<group>"; };
+		59CB209E277AFCFA00BD0400 /* PurchaseHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseHeader.swift; sourceTree = "<group>"; };
+		59CB20A1277B02F800BD0400 /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
+		EC70D9910961BD75980B99F9 /* Pods-Faker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Faker.release.xcconfig"; path = "Target Support Files/Pods-Faker/Pods-Faker.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		59CB20532779A3FA00BD0400 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				46E40BEB45390C782F3AFA8F /* Pods_Faker.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		59CB20642779A3FC00BD0400 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		59CB206E2779A3FC00BD0400 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		00C2E48F015855FC7FA6404D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4C22CE5BF17D7BDAE75DE2C8 /* Pods-Faker.debug.xcconfig */,
+				EC70D9910961BD75980B99F9 /* Pods-Faker.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		59CB204D2779A3FA00BD0400 = {
+			isa = PBXGroup;
+			children = (
+				59CB20582779A3FA00BD0400 /* Faker */,
+				59CB206A2779A3FC00BD0400 /* FakerTests */,
+				59CB20742779A3FC00BD0400 /* FakerUITests */,
+				59CB20572779A3FA00BD0400 /* Products */,
+				00C2E48F015855FC7FA6404D /* Pods */,
+				A004B969C04B358FA5C99871 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		59CB20572779A3FA00BD0400 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				59CB20562779A3FA00BD0400 /* Faker.app */,
+				59CB20672779A3FC00BD0400 /* FakerTests.xctest */,
+				59CB20712779A3FC00BD0400 /* FakerUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		59CB20582779A3FA00BD0400 /* Faker */ = {
+			isa = PBXGroup;
+			children = (
+				59CB20592779A3FA00BD0400 /* FakerApp.swift */,
+				59CB205B2779A3FA00BD0400 /* ContentView.swift */,
+				59CB20A0277B02E900BD0400 /* Common */,
+				59CB20842779A40E00BD0400 /* Views */,
+				59CB20852779A41C00BD0400 /* Models */,
+				59CB208A2779B3E500BD0400 /* ViewModels */,
+				59CB20912779B3ED00BD0400 /* Network */,
+				59CB205D2779A3FC00BD0400 /* Assets.xcassets */,
+				59CB20622779A3FC00BD0400 /* Faker.entitlements */,
+				59CB205F2779A3FC00BD0400 /* Preview Content */,
+			);
+			path = Faker;
+			sourceTree = "<group>";
+		};
+		59CB205F2779A3FC00BD0400 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				59CB20602779A3FC00BD0400 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		59CB206A2779A3FC00BD0400 /* FakerTests */ = {
+			isa = PBXGroup;
+			children = (
+				59CB206B2779A3FC00BD0400 /* FakerTests.swift */,
+			);
+			path = FakerTests;
+			sourceTree = "<group>";
+		};
+		59CB20742779A3FC00BD0400 /* FakerUITests */ = {
+			isa = PBXGroup;
+			children = (
+				59CB20752779A3FC00BD0400 /* FakerUITests.swift */,
+				59CB20772779A3FC00BD0400 /* FakerUITestsLaunchTests.swift */,
+			);
+			path = FakerUITests;
+			sourceTree = "<group>";
+		};
+		59CB20842779A40E00BD0400 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				59CB20892779B24400BD0400 /* Account */,
+				59CB20882779B22700BD0400 /* Purchase */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		59CB20852779A41C00BD0400 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				59841495277A128100A4E858 /* UserModel.swift */,
+				59841498277A16E200A4E858 /* PurchaseCategoryModel.swift */,
+				59841494277A128100A4E858 /* Users.plist */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		59CB20882779B22700BD0400 /* Purchase */ = {
+			isa = PBXGroup;
+			children = (
+				59CB20862779AD6200BD0400 /* PurchaseCategoryView.swift */,
+				59841490277A11AB00A4E858 /* PurchaseCategoryRow.swift */,
+				59CB2094277AE96900BD0400 /* PurchaseView.swift */,
+				59CB2096277AEA0900BD0400 /* PurchaseRow.swift */,
+				59CB209E277AFCFA00BD0400 /* PurchaseHeader.swift */,
+			);
+			path = Purchase;
+			sourceTree = "<group>";
+		};
+		59CB20892779B24400BD0400 /* Account */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Account;
+			sourceTree = "<group>";
+		};
+		59CB208A2779B3E500BD0400 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				59CB208B2779B3E500BD0400 /* Tester.swift */,
+				5984149E277A206B00A4E858 /* PurchaseCategoryViewModel.swift */,
+				59CB209C277AED2D00BD0400 /* AccountViewModel.swift */,
+				59CB209A277AEC7300BD0400 /* FakerViewModel.swift */,
+				598414A0277A23BD00A4E858 /* FakerResponse.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		59CB20912779B3ED00BD0400 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				5984149C277A1BF200A4E858 /* FakerNetwork.swift */,
+				59CB20922779B3ED00BD0400 /* UserAPI.swift */,
+				5984149A277A1A8A00A4E858 /* PurchaseAPI.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		59CB20A0277B02E900BD0400 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				59CB20A1277B02F800BD0400 /* ColorExtension.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		A004B969C04B358FA5C99871 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				433FCF00BD944D12232927B4 /* Pods_Faker.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		59CB20552779A3FA00BD0400 /* Faker */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 59CB207B2779A3FC00BD0400 /* Build configuration list for PBXNativeTarget "Faker" */;
+			buildPhases = (
+				29897224B1DF1CF7AE029E18 /* [CP] Check Pods Manifest.lock */,
+				59CB20522779A3FA00BD0400 /* Sources */,
+				59CB20532779A3FA00BD0400 /* Frameworks */,
+				59CB20542779A3FA00BD0400 /* Resources */,
+				2A6938E9F6E184F56F37D34B /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Faker;
+			productName = Faker;
+			productReference = 59CB20562779A3FA00BD0400 /* Faker.app */;
+			productType = "com.apple.product-type.application";
+		};
+		59CB20662779A3FC00BD0400 /* FakerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 59CB207E2779A3FC00BD0400 /* Build configuration list for PBXNativeTarget "FakerTests" */;
+			buildPhases = (
+				59CB20632779A3FC00BD0400 /* Sources */,
+				59CB20642779A3FC00BD0400 /* Frameworks */,
+				59CB20652779A3FC00BD0400 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				59CB20692779A3FC00BD0400 /* PBXTargetDependency */,
+			);
+			name = FakerTests;
+			productName = FakerTests;
+			productReference = 59CB20672779A3FC00BD0400 /* FakerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		59CB20702779A3FC00BD0400 /* FakerUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 59CB20812779A3FC00BD0400 /* Build configuration list for PBXNativeTarget "FakerUITests" */;
+			buildPhases = (
+				59CB206D2779A3FC00BD0400 /* Sources */,
+				59CB206E2779A3FC00BD0400 /* Frameworks */,
+				59CB206F2779A3FC00BD0400 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				59CB20732779A3FC00BD0400 /* PBXTargetDependency */,
+			);
+			name = FakerUITests;
+			productName = FakerUITests;
+			productReference = 59CB20712779A3FC00BD0400 /* FakerUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		59CB204E2779A3FA00BD0400 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1310;
+				LastUpgradeCheck = 1310;
+				TargetAttributes = {
+					59CB20552779A3FA00BD0400 = {
+						CreatedOnToolsVersion = 13.1;
+					};
+					59CB20662779A3FC00BD0400 = {
+						CreatedOnToolsVersion = 13.1;
+						TestTargetID = 59CB20552779A3FA00BD0400;
+					};
+					59CB20702779A3FC00BD0400 = {
+						CreatedOnToolsVersion = 13.1;
+						TestTargetID = 59CB20552779A3FA00BD0400;
+					};
+				};
+			};
+			buildConfigurationList = 59CB20512779A3FA00BD0400 /* Build configuration list for PBXProject "Faker" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 59CB204D2779A3FA00BD0400;
+			productRefGroup = 59CB20572779A3FA00BD0400 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				59CB20552779A3FA00BD0400 /* Faker */,
+				59CB20662779A3FC00BD0400 /* FakerTests */,
+				59CB20702779A3FC00BD0400 /* FakerUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		59CB20542779A3FA00BD0400 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				59CB20612779A3FC00BD0400 /* Preview Assets.xcassets in Resources */,
+				59841496277A128100A4E858 /* Users.plist in Resources */,
+				59CB205E2779A3FC00BD0400 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		59CB20652779A3FC00BD0400 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		59CB206F2779A3FC00BD0400 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		29897224B1DF1CF7AE029E18 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Faker-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2A6938E9F6E184F56F37D34B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Faker/Pods-Faker-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Faker/Pods-Faker-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Faker/Pods-Faker-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		59CB20522779A3FA00BD0400 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				59CB209B277AEC7300BD0400 /* FakerViewModel.swift in Sources */,
+				59CB205C2779A3FA00BD0400 /* ContentView.swift in Sources */,
+				5984149D277A1BF200A4E858 /* FakerNetwork.swift in Sources */,
+				59841499277A16E200A4E858 /* PurchaseCategoryModel.swift in Sources */,
+				59CB2095277AE96900BD0400 /* PurchaseView.swift in Sources */,
+				59841491277A11AB00A4E858 /* PurchaseCategoryRow.swift in Sources */,
+				59CB205A2779A3FA00BD0400 /* FakerApp.swift in Sources */,
+				59CB20932779B3ED00BD0400 /* UserAPI.swift in Sources */,
+				59CB208E2779B3E500BD0400 /* Tester.swift in Sources */,
+				59CB209D277AED2D00BD0400 /* AccountViewModel.swift in Sources */,
+				59CB20872779AD6200BD0400 /* PurchaseCategoryView.swift in Sources */,
+				5984149F277A206B00A4E858 /* PurchaseCategoryViewModel.swift in Sources */,
+				5984149B277A1A8A00A4E858 /* PurchaseAPI.swift in Sources */,
+				59841497277A128100A4E858 /* UserModel.swift in Sources */,
+				598414A1277A23BD00A4E858 /* FakerResponse.swift in Sources */,
+				59CB209F277AFCFA00BD0400 /* PurchaseHeader.swift in Sources */,
+				59CB2097277AEA0900BD0400 /* PurchaseRow.swift in Sources */,
+				59CB20A2277B02F800BD0400 /* ColorExtension.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		59CB20632779A3FC00BD0400 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				59CB206C2779A3FC00BD0400 /* FakerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		59CB206D2779A3FC00BD0400 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				59CB20782779A3FC00BD0400 /* FakerUITestsLaunchTests.swift in Sources */,
+				59CB20762779A3FC00BD0400 /* FakerUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		59CB20692779A3FC00BD0400 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 59CB20552779A3FA00BD0400 /* Faker */;
+			targetProxy = 59CB20682779A3FC00BD0400 /* PBXContainerItemProxy */;
+		};
+		59CB20732779A3FC00BD0400 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 59CB20552779A3FA00BD0400 /* Faker */;
+			targetProxy = 59CB20722779A3FC00BD0400 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		59CB20792779A3FC00BD0400 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		59CB207A2779A3FC00BD0400 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		59CB207C2779A3FC00BD0400 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4C22CE5BF17D7BDAE75DE2C8 /* Pods-Faker.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Faker/Faker.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Faker/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jinchao1991.Faker;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		59CB207D2779A3FC00BD0400 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EC70D9910961BD75980B99F9 /* Pods-Faker.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Faker/Faker.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Faker/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jinchao1991.Faker;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		59CB207F2779A3FC00BD0400 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jinchao1991.FakerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Faker.app/Contents/MacOS/Faker";
+			};
+			name = Debug;
+		};
+		59CB20802779A3FC00BD0400 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jinchao1991.FakerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Faker.app/Contents/MacOS/Faker";
+			};
+			name = Release;
+		};
+		59CB20822779A3FC00BD0400 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jinchao1991.FakerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = Faker;
+			};
+			name = Debug;
+		};
+		59CB20832779A3FC00BD0400 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jinchao1991.FakerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = Faker;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		59CB20512779A3FA00BD0400 /* Build configuration list for PBXProject "Faker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				59CB20792779A3FC00BD0400 /* Debug */,
+				59CB207A2779A3FC00BD0400 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		59CB207B2779A3FC00BD0400 /* Build configuration list for PBXNativeTarget "Faker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				59CB207C2779A3FC00BD0400 /* Debug */,
+				59CB207D2779A3FC00BD0400 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		59CB207E2779A3FC00BD0400 /* Build configuration list for PBXNativeTarget "FakerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				59CB207F2779A3FC00BD0400 /* Debug */,
+				59CB20802779A3FC00BD0400 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		59CB20812779A3FC00BD0400 /* Build configuration list for PBXNativeTarget "FakerUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				59CB20822779A3FC00BD0400 /* Debug */,
+				59CB20832779A3FC00BD0400 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 59CB204E2779A3FA00BD0400 /* Project object */;
+}

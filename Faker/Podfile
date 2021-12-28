@@ -1,0 +1,14 @@
+# Uncomment the next line to define a global platform for your project
+# install! 'cocoapods', :deterministic_uuids => false
+# source 'https://github.com/CocoaPods/Specs.git'
+source 'https://cdn.cocoapods.org/'
+platform :macos, '12.0'
+#inhibit_all_warnings!
+use_frameworks!
+
+target "Faker" do
+  use_frameworks!
+  pod 'Moya', '~> 15.0'
+  pod 'HandyJSON', '~> 5.0.0'
+#  pod 'Moya/Combine', '~> 15.0'
+end
