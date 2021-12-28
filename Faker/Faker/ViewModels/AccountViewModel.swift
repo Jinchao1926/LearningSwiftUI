@@ -15,38 +15,22 @@ enum State: Int {
     case failure = 3
 }
 
-//struct Hello {
-//    var datas: [String] = []
-//
-//    mutating func world() {
-//        DispatchQueue.main.async {
-//            self.datas = ["world"]
-//        }
-//    }
-//}
+class AccountViewModel: HandyJSON, FakerResponse {
+    private(set) var phone: String?
+    private(set) var password: String?
 
-class AccountViewModel: ObservableObject, HandyJSON, FakerResponse {
-    @Published var phone: String?
-    @Published var password: String?
-
-    @Published var state: State = .idle
-    @Published var message: String?
+    private(set) var state: State = .idle
+    private(set) var message: String?
 
     private(set) var user: UserModel?
 
     func mapping(mapper: HelpingMapper) {
         mapper <<< phone <-- "phone"
         mapper <<< password <-- "password"
-//        mapper <<< state <-- "state"
+        mapper <<< state <-- "state"
     }
 
-    required init() { self.phone = "16605911007"; self.password = "Linger1007" }
-    
-    func test() {
-        self.phone = "18640214270"
-        self.message = "error"
-        self.state = .failure
-    }
+    required init() {}
 
     func purchase(completion: @escaping () -> Void) {
         login { [weak self] loginState, loginError in
@@ -55,15 +39,13 @@ class AccountViewModel: ObservableObject, HandyJSON, FakerResponse {
             if loginState == .success, let token = self.user?.token {
                 // login success
                 self.createOrder(with: token) { [weak self] state, error in
-//                    self?.objectWillChange.send()
                     self?.state = state
                     self?.message = error
                     completion()
                 }
                 return
             }
-
-//            self.objectWillChange.send()
+            
             self.state = loginState
             self.message = loginError
             completion()

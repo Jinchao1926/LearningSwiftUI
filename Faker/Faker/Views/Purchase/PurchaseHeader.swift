@@ -18,11 +18,12 @@ struct PurchaseHeader: View {
                 .foregroundColor(Color(.black))
                 .fixedSize(horizontal: true, vertical: false)
             Spacer()
-            Button {
-                action()
-            } label: {
-                Image(systemName: "play")
-            }.padding(.trailing, 15)
+            Image(systemName: "play.fill")
+                .scaleEffect(x: 1.4, y: 1.4, anchor: .center)
+                .padding(.trailing, 10)
+                .onTapGesture {
+                    action()
+                }
         }.padding([.leading, .top, .trailing])
     }
 }

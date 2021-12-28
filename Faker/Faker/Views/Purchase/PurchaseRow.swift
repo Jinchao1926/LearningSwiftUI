@@ -20,22 +20,36 @@ struct PurchaseRow: View {
     }
     
     var body: some View {
-        VStack(alignment: .leading) {
-            Text(title)
-                .font(.system(size: fontSize))
-                .foregroundColor(Color(.black))
-                .fixedSize(horizontal: true, vertical: false)
-            
-            if let message = message {
-                Text(message)
+        HStack {
+            VStack(alignment: .leading) {
+                Text(title)
+                    .font(.system(size: fontSize))
                     .foregroundColor(Color(.black))
+                    .fixedSize(horizontal: true, vertical: false)
+                
+                if let message = message {
+                    Text(message)
+                        .foregroundColor(Color(.black))
+                }
             }
-        }
+            Spacer()
+            // State
+            if state == .loading {
+                ProgressView()
+                    .progressViewStyle(CircularProgressViewStyle(tint: .gray))
+                    .scaleEffect(x: 0.6, y: 0.6, anchor: .center)
+            }
+            else if state == .success {
+                Image(systemName: "checkmark.circle.fill")
+                    .scaleEffect(x: 1.2, y: 1.2, anchor: .center)
+                    .padding(.trailing, 10)
+            }
+            else if state == .failure {
+                Image(systemName: "exclamationmark.circle.fill")
+                    .scaleEffect(x: 1.2, y: 1.2, anchor: .center)
+                    .padding(.trailing, 10)
+            }
+        }.frame(minHeight: 30)
+        
     }
 }
-
-//struct PurchaseRow_Previews: PreviewProvider {
-//    static var previews: some View {
-//        PurchaseRow()
-//    }
-//}

@@ -24,7 +24,11 @@ struct PurchaseView: View {
             List {
                 ForEach(viewModel.accounts.indices, id: \.self) { idx in
                     if let account = viewModel.accounts[idx] {
-                        PurchaseRow(phone: account.phone, password: account.password, state: account.state, message: account.message, index: idx)
+                        PurchaseRow(phone: account.phone,
+                                    password: account.password,
+                                    state: account.state,
+                                    message: account.message,
+                                    index: idx)
                     }
                 }
             }.listStyle(InsetListStyle())
