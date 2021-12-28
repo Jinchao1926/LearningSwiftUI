@@ -7,6 +7,16 @@
 		<string>Linger1007</string>
 		<key>phone</key>
 		<string>16605911007</string>
+		<key>state</key>
+		<integer>1</integer>
+	</dict>
+	<dict>
+		<key>password</key>
+		<string>Linger1007</string>
+		<key>phone</key>
+		<string>16605911007</string>
+		<key>state</key>
+		<integer>2</integer>
 	</dict>
 </array>
 </plist>

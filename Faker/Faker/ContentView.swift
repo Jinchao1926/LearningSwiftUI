@@ -9,8 +9,8 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        PurchaseCategoryView()
-            .background(Color(hex: "f9f9f9"))
+//        PurchaseCategoryView()
+        FakerToolbar()
     }
 }
 

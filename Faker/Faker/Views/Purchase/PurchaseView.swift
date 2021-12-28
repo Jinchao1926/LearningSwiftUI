@@ -33,6 +33,6 @@ struct PurchaseView: View {
                 }
             }.listStyle(InsetListStyle())
                 .padding()
-        }.background(Color(hex: "f9f9f9"))
+        }.background(Color("GrayBackground"))
     }
 }

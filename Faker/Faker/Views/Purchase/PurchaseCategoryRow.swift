@@ -8,14 +8,14 @@
 import SwiftUI
 
 struct PurchaseCategoryRow: View {
-    let fontSize: CGFloat = 18
+    let fontSize: CGFloat = 16
     let title: String?
     
     var body: some View {
         Text(title ?? "")
             .font(.system(size: fontSize))
             .foregroundColor(Color(.black))
-            .padding([.top, .bottom], 10)
+            .padding([.top, .bottom], 5)
             .fixedSize(horizontal: true, vertical: false)
     }
 }
