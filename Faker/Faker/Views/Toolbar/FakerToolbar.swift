@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct FakerToolbar: View {
+    @EnvironmentObject var viewModel: FakerViewModel
+    
     var body: some View {
         NavigationView {
             List {
@@ -25,7 +27,8 @@ struct FakerToolbar: View {
                     }
                 }
             }.listStyle(SidebarListStyle())  // SidebarListStyle - 可收缩
-        }//.frame(minWidth: 200, maxWidth: .infinity, minHeight: 500, maxHeight: .infinity)*/
+        }//.frame(minWidth: 200, maxWidth: .infinity, minHeight: 500, maxHeight: .infinity)
+        .disabled(viewModel.isPurchasing)
     }
 }
 

@@ -47,7 +47,6 @@ class AccountViewModel {
         }
         
         let path = self.path
-        print("path:", path)
         print("errorLines:", errorLines)
         
         let ret = users.write(toFile: path, atomically: true)

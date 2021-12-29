@@ -37,7 +37,7 @@ class UserViewModel: HandyJSON, FakerResponse {
         message = nil
     }
 
-    func purchase(_ category: PurchaseCategoryModel, completion: @escaping () -> Void) {
+    func purchase(_ category: PurchaseCategoryModel, completion: @escaping (_ state: State) -> Void) {
         login { [weak self] loginState, loginError in
             guard let self = self else { return }
 
@@ -46,14 +46,14 @@ class UserViewModel: HandyJSON, FakerResponse {
                 self.createOrder(with: token, category: category) { [weak self] state, error in
                     self?.state = state
                     self?.message = error
-                    completion()
+                    completion(state)
                 }
                 return
             }
             
             self.state = loginState
             self.message = loginError
-            completion()
+            completion(loginState)
         }
     }
 

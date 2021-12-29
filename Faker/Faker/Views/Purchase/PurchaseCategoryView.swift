@@ -9,6 +9,7 @@ import SwiftUI
 
 struct PurchaseCategoryView: View {
     @EnvironmentObject private var viewModel: PurchaseCategoryViewModel
+    @EnvironmentObject private var fakerViewModel: FakerViewModel
     
     var body: some View {
         NavigationView {
@@ -34,5 +35,6 @@ struct PurchaseCategoryView: View {
                 viewModel.fetchPurchaseList()
             }).listStyle(InsetListStyle())  // SidebarListStyle - 可收缩
         }
+        .disabled(fakerViewModel.isPurchasing)
     }
 }

@@ -11,6 +11,8 @@ struct PurchaseHeader: View {
     var title: String
     var action: () -> Void
     
+    @EnvironmentObject var viewModel: FakerViewModel
+    
     var body: some View {
         HStack {
             Text(title)
@@ -24,6 +26,7 @@ struct PurchaseHeader: View {
                 .onTapGesture {
                     action()
                 }
+                .disabled(viewModel.isPurchasing)
         }.padding([.leading, .top, .trailing])
     }
 }
