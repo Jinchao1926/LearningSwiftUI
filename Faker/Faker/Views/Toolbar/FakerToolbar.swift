@@ -20,7 +20,7 @@ struct FakerToolbar: View {
                     NavigationLink(destination: AccountView()) {
                         Label("账号", systemImage: "person")
                     }
-                    NavigationLink(destination: AccountView()) {
+                    NavigationLink(destination: SettingView()) {
                         Label("设置", systemImage: "gear")
                     }
                 }

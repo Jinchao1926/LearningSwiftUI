@@ -10,6 +10,8 @@
 		46E40BEB45390C782F3AFA8F /* Pods_Faker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 433FCF00BD944D12232927B4 /* Pods_Faker.framework */; };
 		596AF3AD277B79820026BD91 /* FakerToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 596AF3AC277B79820026BD91 /* FakerToolbar.swift */; };
 		596AF3AF277B81310026BD91 /* AccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 596AF3AE277B81310026BD91 /* AccountView.swift */; };
+		596AF3B2277BF6D80026BD91 /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 596AF3B1277BF6D80026BD91 /* SettingView.swift */; };
+		596AF3B5277C0B5E0026BD91 /* SettingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 596AF3B4277C0B5E0026BD91 /* SettingViewModel.swift */; };
 		59841491277A11AB00A4E858 /* PurchaseCategoryRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59841490277A11AB00A4E858 /* PurchaseCategoryRow.swift */; };
 		59841496277A128100A4E858 /* Users.plist in Resources */ = {isa = PBXBuildFile; fileRef = 59841494277A128100A4E858 /* Users.plist */; };
 		59841497277A128100A4E858 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59841495277A128100A4E858 /* UserModel.swift */; };
@@ -58,6 +60,8 @@
 		4C22CE5BF17D7BDAE75DE2C8 /* Pods-Faker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Faker.debug.xcconfig"; path = "Target Support Files/Pods-Faker/Pods-Faker.debug.xcconfig"; sourceTree = "<group>"; };
 		596AF3AC277B79820026BD91 /* FakerToolbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakerToolbar.swift; sourceTree = "<group>"; };
 		596AF3AE277B81310026BD91 /* AccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountView.swift; sourceTree = "<group>"; };
+		596AF3B1277BF6D80026BD91 /* SettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingView.swift; sourceTree = "<group>"; };
+		596AF3B4277C0B5E0026BD91 /* SettingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewModel.swift; sourceTree = "<group>"; };
 		59841490277A11AB00A4E858 /* PurchaseCategoryRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseCategoryRow.swift; sourceTree = "<group>"; };
 		59841494277A128100A4E858 /* Users.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Users.plist; sourceTree = "<group>"; };
 		59841495277A128100A4E858 /* UserModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
@@ -132,6 +136,24 @@
 			path = Toolbar;
 			sourceTree = "<group>";
 		};
+		596AF3B0277BF6C50026BD91 /* Setting */ = {
+			isa = PBXGroup;
+			children = (
+				596AF3B1277BF6D80026BD91 /* SettingView.swift */,
+			);
+			path = Setting;
+			sourceTree = "<group>";
+		};
+		596AF3B3277C0B180026BD91 /* Purchase */ = {
+			isa = PBXGroup;
+			children = (
+				59CB209A277AEC7300BD0400 /* FakerViewModel.swift */,
+				59CB209C277AED2D00BD0400 /* AccountViewModel.swift */,
+				5984149E277A206B00A4E858 /* PurchaseCategoryViewModel.swift */,
+			);
+			path = Purchase;
+			sourceTree = "<group>";
+		};
 		59CB204D2779A3FA00BD0400 = {
 			isa = PBXGroup;
 			children = (
@@ -202,6 +224,7 @@
 				596AF3AB277B79630026BD91 /* Toolbar */,
 				59CB20882779B22700BD0400 /* Purchase */,
 				59CB20892779B24400BD0400 /* Account */,
+				596AF3B0277BF6C50026BD91 /* Setting */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -239,11 +262,10 @@
 		59CB208A2779B3E500BD0400 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
-				59CB208B2779B3E500BD0400 /* Tester.swift */,
-				5984149E277A206B00A4E858 /* PurchaseCategoryViewModel.swift */,
-				59CB209C277AED2D00BD0400 /* AccountViewModel.swift */,
-				59CB209A277AEC7300BD0400 /* FakerViewModel.swift */,
+				596AF3B3277C0B180026BD91 /* Purchase */,
 				598414A0277A23BD00A4E858 /* FakerResponse.swift */,
+				596AF3B4277C0B5E0026BD91 /* SettingViewModel.swift */,
+				59CB208B2779B3E500BD0400 /* Tester.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -452,6 +474,7 @@
 				59CB209B277AEC7300BD0400 /* FakerViewModel.swift in Sources */,
 				59CB205C2779A3FA00BD0400 /* ContentView.swift in Sources */,
 				5984149D277A1BF200A4E858 /* FakerNetwork.swift in Sources */,
+				596AF3B2277BF6D80026BD91 /* SettingView.swift in Sources */,
 				59841499277A16E200A4E858 /* PurchaseCategoryModel.swift in Sources */,
 				596AF3AF277B81310026BD91 /* AccountView.swift in Sources */,
 				59CB2095277AE96900BD0400 /* PurchaseView.swift in Sources */,
@@ -467,6 +490,7 @@
 				59841497277A128100A4E858 /* UserModel.swift in Sources */,
 				598414A1277A23BD00A4E858 /* FakerResponse.swift in Sources */,
 				59CB209F277AFCFA00BD0400 /* PurchaseHeader.swift in Sources */,
+				596AF3B5277C0B5E0026BD91 /* SettingViewModel.swift in Sources */,
 				59CB2097277AEA0900BD0400 /* PurchaseRow.swift in Sources */,
 				59CB20A2277B02F800BD0400 /* ColorExtension.swift in Sources */,
 			);

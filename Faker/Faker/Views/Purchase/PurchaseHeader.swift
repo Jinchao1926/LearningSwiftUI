@@ -28,10 +28,19 @@ struct PurchaseHeader: View {
     }
 }
 
-struct PurchaseHeader_Previews: PreviewProvider {
-    static var previews: some View {
-        PurchaseHeader(title: "Category") {
-            
-        }
+struct PurchaseFooter: View {
+    var interval: UInt32
+    var groupCount: Int
+    var groupInterval: UInt32
+    
+    var title: String {
+        String(format: "Tips: [%d个]账号一组，组间间隔[%d分钟]，组内间隔[%d秒]", groupCount, groupInterval, interval)
+    }
+    
+    var body: some View {
+        Text(title)
+            .font(.footnote)
+            .lineLimit(1)
+            .padding([.leading, .bottom, .trailing])
     }
 }

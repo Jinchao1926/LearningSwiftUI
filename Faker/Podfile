@@ -10,5 +10,6 @@ target "Faker" do
   use_frameworks!
   pod 'Moya', '~> 15.0'
   pod 'HandyJSON', '~> 5.0.0'
+  pod 'ToastUI', '~> 2.0.0'
 #  pod 'Moya/Combine', '~> 15.0'
 end

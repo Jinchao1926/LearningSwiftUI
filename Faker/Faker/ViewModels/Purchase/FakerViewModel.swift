@@ -6,10 +6,14 @@
 //
 
 import Foundation
+import SwiftUI
 
 class FakerViewModel: ObservableObject {
     static var shared: FakerViewModel = FakerViewModel()
     private init() {}
+    
+    private var setting: SettingViewModel = SettingViewModel.shared
+//    @EnvironmentObject private var setting: SettingViewModel
     
     @Published private(set) var accounts: [AccountViewModel?] = []
     private let queue = DispatchQueue(label: "com.faker.purchase")
@@ -31,6 +35,8 @@ class FakerViewModel: ObservableObject {
     }
     
     func bulkPurchasing() {
+        print("[bulkPurchasing] interval: \(setting.intInterval), groupCount: \(setting.intGroupCount), groupInterval: \(setting.intGroupInterval)")
+        
         queue.async {
             let count = self.accounts.count
             
@@ -47,7 +53,13 @@ class FakerViewModel: ObservableObject {
                     print("bulk purchasing finished!")
                 }
                 
-                sleep(1)    // 1s
+                if (idx + 1) % self.setting.intGroupCount == 0 {
+                    print("grouping")
+                    sleep(self.setting.intGroupInterval * 60)   // setting.groupInterval (mins)
+                }
+                else {
+                    sleep(self.setting.intInterval)    // setting.interval (s)
+                }
             }
         }
     }

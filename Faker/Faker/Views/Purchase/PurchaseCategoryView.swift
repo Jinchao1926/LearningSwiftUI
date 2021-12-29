@@ -13,6 +13,15 @@ struct PurchaseCategoryView: View {
     var body: some View {
         NavigationView {
             List {
+                if viewModel.categories.count == 0 {
+                    HStack {
+                        Spacer()
+                        ProgressView()
+                            .progressViewStyle(CircularProgressViewStyle(tint: .gray))
+                            .scaleEffect(x: 0.8, y: 0.8, anchor: .center)
+                        Spacer()
+                    }
+                }
                 ForEach(viewModel.categories, id: \.self) { category in
                     // modify acentColor: https://developer.apple.com/documentation/watchkit/setting_the_app_s_tint_color
                     if let category = category {

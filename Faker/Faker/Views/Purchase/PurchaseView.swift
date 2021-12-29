@@ -11,16 +11,19 @@ struct PurchaseView: View {
     var category: PurchaseCategoryModel
 
     @EnvironmentObject private var viewModel: FakerViewModel
+    @EnvironmentObject private var settings: SettingViewModel
     
     init(category: PurchaseCategoryModel) {
         self.category = category
     }
     
     public var body: some View {
-        VStack {
+        VStack(alignment: .leading) {
+            // header
             PurchaseHeader(title: category.name ?? "Category") {
                 viewModel.bulkPurchasing()
             }
+            // list
             List {
                 ForEach(viewModel.accounts.indices, id: \.self) { idx in
                     if let account = viewModel.accounts[idx] {
@@ -31,8 +34,12 @@ struct PurchaseView: View {
                                     index: idx)
                     }
                 }
-            }.listStyle(InsetListStyle())
-                .padding()
+            }
+            .listStyle(InsetListStyle())
+            .padding()
+            
+            // footer
+            PurchaseFooter(interval: settings.intInterval, groupCount: settings.intGroupCount, groupInterval: settings.intGroupInterval)
         }.background(Color("GrayBackground"))
     }
 }
