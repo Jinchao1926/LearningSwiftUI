@@ -11,7 +11,7 @@ let PurchaseProvider = MoyaProvider<PurchaseAPI>()
 
 enum PurchaseAPI {
     case category
-    case order(token: String)
+    case order(token: String, tuanID: String, price: Float, count: Int = 5)
 }
 
 extension PurchaseAPI: FakerNetwork {
@@ -48,7 +48,7 @@ extension PurchaseAPI: FakerNetwork {
                           "QueryListType": true ] as [String : Any]
             return .requestParameters(parameters: parmeters, encoding: URLEncoding.default)
         
-        case .order(let token):
+        case .order(let token, let tuanID, let price, let count):
             /*
              * {
              "Count": "5",
@@ -67,9 +67,9 @@ extension PurchaseAPI: FakerNetwork {
              }
              */
             let header = [ "Token": token ]
-            parmeters = [ "TuanId": "169609",
-                          "Count": "5",
-                          "TuanPrice": 85,
+            parmeters = [ "TuanId": tuanID,
+                          "Count": String(count),
+                          "TuanPrice": price,
                           "MallId": "10025",
                           "datasource": "2",
                           "TuanVersion": 9,

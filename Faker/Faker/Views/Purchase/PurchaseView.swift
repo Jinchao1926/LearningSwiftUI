@@ -8,7 +8,11 @@
 import SwiftUI
 
 struct PurchaseView: View {
-    var category: PurchaseCategoryModel
+    var category: PurchaseCategoryModel {
+        didSet {
+//            viewModel.bulkReset()
+        }
+    }
 
     @EnvironmentObject private var viewModel: FakerViewModel
     @EnvironmentObject private var settings: SettingViewModel
@@ -21,12 +25,12 @@ struct PurchaseView: View {
         VStack(alignment: .leading) {
             // header
             PurchaseHeader(title: category.name ?? "Category") {
-                viewModel.bulkPurchasing()
+                viewModel.bulkPurchasing(with: category)
             }
             // list
             List {
-                ForEach(viewModel.accounts.indices, id: \.self) { idx in
-                    if let account = viewModel.accounts[idx] {
+                ForEach(viewModel.users.indices, id: \.self) { idx in
+                    if let account = viewModel.users[idx] {
                         PurchaseRow(phone: account.phone,
                                     password: account.password,
                                     state: account.state,

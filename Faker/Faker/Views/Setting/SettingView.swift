@@ -51,15 +51,10 @@ private struct SettingContentView: View {
                     presentingToast = viewModel.synchronize()
                 } label: {
                     Text("确 定")
-                        .font(.system(size: 15))
-                        .foregroundColor(.white)
-                        .padding([.top, .bottom], 8)
-                        .padding([.leading, .trailing], 15)
-                        .background(Color(hex: "5e8cfb"))
-                        .cornerRadius(8)
+                        .modifier(ConfirmTextModifier())
                 }
                 .buttonStyle(PlainButtonStyle())
-                .toast(isPresented: $presentingToast, dismissAfter: 0.5) {
+                .toast(isPresented: $presentingToast, dismissAfter: 1) {
                   ToastView("Success")
                     .toastViewStyle(SuccessToastViewStyle())
                 }
@@ -74,6 +69,18 @@ struct SettingTextFieldModifier: ViewModifier {
         content
             .textFieldStyle(RoundedBorderTextFieldStyle())
             .frame(width: 50)
+    }
+}
+
+struct ConfirmTextModifier: ViewModifier {
+    func body(content: Content) -> some View {
+        content
+            .font(.system(size: 15))
+            .foregroundColor(.white)
+            .padding([.top, .bottom], 8)
+            .padding([.leading, .trailing], 15)
+            .background(Color("BlueBackground"))
+            .cornerRadius(8)
     }
 }
 

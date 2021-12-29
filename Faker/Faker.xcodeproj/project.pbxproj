@@ -12,8 +12,8 @@
 		596AF3AF277B81310026BD91 /* AccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 596AF3AE277B81310026BD91 /* AccountView.swift */; };
 		596AF3B2277BF6D80026BD91 /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 596AF3B1277BF6D80026BD91 /* SettingView.swift */; };
 		596AF3B5277C0B5E0026BD91 /* SettingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 596AF3B4277C0B5E0026BD91 /* SettingViewModel.swift */; };
+		596AF3B9277C4FD90026BD91 /* AccountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 596AF3B8277C4FD90026BD91 /* AccountViewModel.swift */; };
 		59841491277A11AB00A4E858 /* PurchaseCategoryRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59841490277A11AB00A4E858 /* PurchaseCategoryRow.swift */; };
-		59841496277A128100A4E858 /* Users.plist in Resources */ = {isa = PBXBuildFile; fileRef = 59841494277A128100A4E858 /* Users.plist */; };
 		59841497277A128100A4E858 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59841495277A128100A4E858 /* UserModel.swift */; };
 		59841499277A16E200A4E858 /* PurchaseCategoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59841498277A16E200A4E858 /* PurchaseCategoryModel.swift */; };
 		5984149B277A1A8A00A4E858 /* PurchaseAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5984149A277A1A8A00A4E858 /* PurchaseAPI.swift */; };
@@ -33,7 +33,7 @@
 		59CB2095277AE96900BD0400 /* PurchaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59CB2094277AE96900BD0400 /* PurchaseView.swift */; };
 		59CB2097277AEA0900BD0400 /* PurchaseRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59CB2096277AEA0900BD0400 /* PurchaseRow.swift */; };
 		59CB209B277AEC7300BD0400 /* FakerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59CB209A277AEC7300BD0400 /* FakerViewModel.swift */; };
-		59CB209D277AED2D00BD0400 /* AccountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59CB209C277AED2D00BD0400 /* AccountViewModel.swift */; };
+		59CB209D277AED2D00BD0400 /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59CB209C277AED2D00BD0400 /* UserViewModel.swift */; };
 		59CB209F277AFCFA00BD0400 /* PurchaseHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59CB209E277AFCFA00BD0400 /* PurchaseHeader.swift */; };
 		59CB20A2277B02F800BD0400 /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59CB20A1277B02F800BD0400 /* ColorExtension.swift */; };
 /* End PBXBuildFile section */
@@ -62,8 +62,8 @@
 		596AF3AE277B81310026BD91 /* AccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountView.swift; sourceTree = "<group>"; };
 		596AF3B1277BF6D80026BD91 /* SettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingView.swift; sourceTree = "<group>"; };
 		596AF3B4277C0B5E0026BD91 /* SettingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewModel.swift; sourceTree = "<group>"; };
+		596AF3B8277C4FD90026BD91 /* AccountViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewModel.swift; sourceTree = "<group>"; };
 		59841490277A11AB00A4E858 /* PurchaseCategoryRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseCategoryRow.swift; sourceTree = "<group>"; };
-		59841494277A128100A4E858 /* Users.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Users.plist; sourceTree = "<group>"; };
 		59841495277A128100A4E858 /* UserModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		59841498277A16E200A4E858 /* PurchaseCategoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseCategoryModel.swift; sourceTree = "<group>"; };
 		5984149A277A1A8A00A4E858 /* PurchaseAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseAPI.swift; sourceTree = "<group>"; };
@@ -87,7 +87,7 @@
 		59CB2094277AE96900BD0400 /* PurchaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseView.swift; sourceTree = "<group>"; };
 		59CB2096277AEA0900BD0400 /* PurchaseRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseRow.swift; sourceTree = "<group>"; };
 		59CB209A277AEC7300BD0400 /* FakerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakerViewModel.swift; sourceTree = "<group>"; };
-		59CB209C277AED2D00BD0400 /* AccountViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountViewModel.swift; sourceTree = "<group>"; };
+		59CB209C277AED2D00BD0400 /* UserViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
 		59CB209E277AFCFA00BD0400 /* PurchaseHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseHeader.swift; sourceTree = "<group>"; };
 		59CB20A1277B02F800BD0400 /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
 		EC70D9910961BD75980B99F9 /* Pods-Faker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Faker.release.xcconfig"; path = "Target Support Files/Pods-Faker/Pods-Faker.release.xcconfig"; sourceTree = "<group>"; };
@@ -148,10 +148,26 @@
 			isa = PBXGroup;
 			children = (
 				59CB209A277AEC7300BD0400 /* FakerViewModel.swift */,
-				59CB209C277AED2D00BD0400 /* AccountViewModel.swift */,
+				59CB209C277AED2D00BD0400 /* UserViewModel.swift */,
 				5984149E277A206B00A4E858 /* PurchaseCategoryViewModel.swift */,
 			);
 			path = Purchase;
+			sourceTree = "<group>";
+		};
+		596AF3B6277C4FBA0026BD91 /* Account */ = {
+			isa = PBXGroup;
+			children = (
+				596AF3B8277C4FD90026BD91 /* AccountViewModel.swift */,
+			);
+			path = Account;
+			sourceTree = "<group>";
+		};
+		596AF3B7277C4FC00026BD91 /* Setting */ = {
+			isa = PBXGroup;
+			children = (
+				596AF3B4277C0B5E0026BD91 /* SettingViewModel.swift */,
+			);
+			path = Setting;
 			sourceTree = "<group>";
 		};
 		59CB204D2779A3FA00BD0400 = {
@@ -234,7 +250,6 @@
 			children = (
 				59841495277A128100A4E858 /* UserModel.swift */,
 				59841498277A16E200A4E858 /* PurchaseCategoryModel.swift */,
-				59841494277A128100A4E858 /* Users.plist */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -263,8 +278,9 @@
 			isa = PBXGroup;
 			children = (
 				596AF3B3277C0B180026BD91 /* Purchase */,
+				596AF3B6277C4FBA0026BD91 /* Account */,
+				596AF3B7277C4FC00026BD91 /* Setting */,
 				598414A0277A23BD00A4E858 /* FakerResponse.swift */,
-				596AF3B4277C0B5E0026BD91 /* SettingViewModel.swift */,
 				59CB208B2779B3E500BD0400 /* Tester.swift */,
 			);
 			path = ViewModels;
@@ -403,7 +419,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				59CB20612779A3FC00BD0400 /* Preview Assets.xcassets in Resources */,
-				59841496277A128100A4E858 /* Users.plist in Resources */,
 				59CB205E2779A3FC00BD0400 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -482,7 +497,8 @@
 				59CB205A2779A3FA00BD0400 /* FakerApp.swift in Sources */,
 				59CB20932779B3ED00BD0400 /* UserAPI.swift in Sources */,
 				59CB208E2779B3E500BD0400 /* Tester.swift in Sources */,
-				59CB209D277AED2D00BD0400 /* AccountViewModel.swift in Sources */,
+				596AF3B9277C4FD90026BD91 /* AccountViewModel.swift in Sources */,
+				59CB209D277AED2D00BD0400 /* UserViewModel.swift in Sources */,
 				59CB20872779AD6200BD0400 /* PurchaseCategoryView.swift in Sources */,
 				5984149F277A206B00A4E858 /* PurchaseCategoryViewModel.swift in Sources */,
 				596AF3AD277B79820026BD91 /* FakerToolbar.swift in Sources */,
@@ -662,7 +678,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.jinchao1991.Faker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -688,7 +704,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.jinchao1991.Faker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;

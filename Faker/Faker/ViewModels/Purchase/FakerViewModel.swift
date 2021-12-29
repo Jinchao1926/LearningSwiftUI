@@ -15,33 +15,38 @@ class FakerViewModel: ObservableObject {
     private var setting: SettingViewModel = SettingViewModel.shared
 //    @EnvironmentObject private var setting: SettingViewModel
     
-    @Published private(set) var accounts: [AccountViewModel?] = []
+    @Published private(set) var users: [UserViewModel?] = []
     private let queue = DispatchQueue(label: "com.faker.purchase")
     
     //MARK:-
+    func bulkReset() {
+        for user in users {
+            user?.reset()
+        }
+        self.objectWillChange.send()
+    }
+    
     func bulkAccountsLoading() {
-        if let path = Bundle.main.path(forResource: "Users", ofType: "plist") {
-            if let users = NSArray(contentsOfFile: path) {
-                print("bulk loading \(users.count) accounts")
-                
-                if let array = [AccountViewModel].deserialize(from: users) {
-                    self.accounts = array
-                }
-                return
+        if let users = AccountViewModel.shared.readPlistUsers() {
+            print("bulk loading \(users.count) users")
+            
+            if let array = [UserViewModel].deserialize(from: users) {
+                self.users = array
             }
+            return
         }
         
         print("read plist error")
     }
     
-    func bulkPurchasing() {
+    func bulkPurchasing(with category: PurchaseCategoryModel) {
         print("[bulkPurchasing] interval: \(setting.intInterval), groupCount: \(setting.intGroupCount), groupInterval: \(setting.intGroupInterval)")
         
         queue.async {
-            let count = self.accounts.count
+            let count = self.users.count
             
-            for (idx, viewModel) in self.accounts.enumerated() {
-                viewModel?.purchase { [weak self] in
+            for (idx, viewModel) in self.users.enumerated() {
+                viewModel?.purchase(category) { [weak self] in
                     DispatchQueue.main.async {
                         // https://stackoverflow.com/questions/57459727/why-is-an-observedobject-array-not-updated-in-my-swiftui-application
                         self?.objectWillChange.send()
