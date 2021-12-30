@@ -11,6 +11,7 @@ let GiftProvider = MoyaProvider<GiftAPI>()
 
 enum GiftAPI {
     case list
+    case exchange(token: String, giftID: String)
 }
 
 extension GiftAPI: FakerNetwork {
@@ -18,6 +19,8 @@ extension GiftAPI: FakerNetwork {
         switch self {
         case .list:
             return "gift/giftmanager/GetGiftInfoList"
+        case .exchange(_, _):
+            return "gift/giftmanager/DoExchange"
         }
     }
     
@@ -39,6 +42,27 @@ extension GiftAPI: FakerNetwork {
                           "ps": 50,
                           "cid": 0,
                           "ce": 0] as [String : Any]
+            return .requestParameters(parameters: parmeters, encoding: JSONEncoding.default)
+            
+        case .exchange(let token, let giftID):
+            /* {
+                 "mid": "11403",
+                 "gid": "146496",
+                 "c": "1",
+                 "s": "5",
+                 "cbu": "//m.mallcoo.cn/a/gift/11403/result?oid=",
+                 "exp": null,
+                 "Header": {
+                     "Token": "3saIR4hCTkmPJwqI6FdJZweVYSnfRJs0,16419"
+                 }
+             }
+             */
+            let header = [ "Token": token ]
+            parmeters = [ "mid": "11403",
+                          "gid": giftID,
+                          "c": "1",
+                          "s": "5",
+                          "Header": header ] as [String : Any]
             return .requestParameters(parameters: parmeters, encoding: JSONEncoding.default)
         }
     }

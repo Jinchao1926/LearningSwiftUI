@@ -10,14 +10,18 @@
 		46E40BEB45390C782F3AFA8F /* Pods_Faker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 433FCF00BD944D12232927B4 /* Pods_Faker.framework */; };
 		592C3DB2277D9CE300DAF7A0 /* GiftAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 592C3DB1277D9CE300DAF7A0 /* GiftAPI.swift */; };
 		592C3DB4277DA1C000DAF7A0 /* GiftModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 592C3DB3277DA1C000DAF7A0 /* GiftModel.swift */; };
-		592C3DBA277DA57E00DAF7A0 /* GiftView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 592C3DB9277DA57E00DAF7A0 /* GiftView.swift */; };
+		592C3DBA277DA57E00DAF7A0 /* GiftListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 592C3DB9277DA57E00DAF7A0 /* GiftListView.swift */; };
 		592C3DBD277DA5BA00DAF7A0 /* GiftViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 592C3DBC277DA5BA00DAF7A0 /* GiftViewModel.swift */; };
-		592C3DBF277DA6F700DAF7A0 /* GiftRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 592C3DBE277DA6F700DAF7A0 /* GiftRow.swift */; };
+		592C3DBF277DA6F700DAF7A0 /* GiftListRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 592C3DBE277DA6F700DAF7A0 /* GiftListRow.swift */; };
 		596AF3AD277B79820026BD91 /* FakerToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 596AF3AC277B79820026BD91 /* FakerToolbar.swift */; };
 		596AF3AF277B81310026BD91 /* AccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 596AF3AE277B81310026BD91 /* AccountView.swift */; };
 		596AF3B2277BF6D80026BD91 /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 596AF3B1277BF6D80026BD91 /* SettingView.swift */; };
 		596AF3B5277C0B5E0026BD91 /* SettingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 596AF3B4277C0B5E0026BD91 /* SettingViewModel.swift */; };
 		596AF3B9277C4FD90026BD91 /* AccountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 596AF3B8277C4FD90026BD91 /* AccountViewModel.swift */; };
+		596AF3BB277DE94C0026BD91 /* GiftExchangeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 596AF3BA277DE94C0026BD91 /* GiftExchangeView.swift */; };
+		596AF3BD277DE95C0026BD91 /* GiftExchangeRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 596AF3BC277DE95C0026BD91 /* GiftExchangeRow.swift */; };
+		596AF3BF277DE9A30026BD91 /* GiftExchangeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 596AF3BE277DE9A30026BD91 /* GiftExchangeViewModel.swift */; };
+		596AF3C1277DFC1C0026BD91 /* GiftView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 596AF3C0277DFC1C0026BD91 /* GiftView.swift */; };
 		59841491277A11AB00A4E858 /* PurchaseCategoryRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59841490277A11AB00A4E858 /* PurchaseCategoryRow.swift */; };
 		59841497277A128100A4E858 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59841495277A128100A4E858 /* UserModel.swift */; };
 		59841499277A16E200A4E858 /* PurchaseCategoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59841498277A16E200A4E858 /* PurchaseCategoryModel.swift */; };
@@ -33,7 +37,6 @@
 		59CB20762779A3FC00BD0400 /* FakerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59CB20752779A3FC00BD0400 /* FakerUITests.swift */; };
 		59CB20782779A3FC00BD0400 /* FakerUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59CB20772779A3FC00BD0400 /* FakerUITestsLaunchTests.swift */; };
 		59CB20872779AD6200BD0400 /* PurchaseCategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59CB20862779AD6200BD0400 /* PurchaseCategoryView.swift */; };
-		59CB208E2779B3E500BD0400 /* Tester.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59CB208B2779B3E500BD0400 /* Tester.swift */; };
 		59CB20932779B3ED00BD0400 /* UserAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59CB20922779B3ED00BD0400 /* UserAPI.swift */; };
 		59CB2095277AE96900BD0400 /* PurchaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59CB2094277AE96900BD0400 /* PurchaseView.swift */; };
 		59CB2097277AEA0900BD0400 /* PurchaseRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59CB2096277AEA0900BD0400 /* PurchaseRow.swift */; };
@@ -65,14 +68,18 @@
 		4C22CE5BF17D7BDAE75DE2C8 /* Pods-Faker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Faker.debug.xcconfig"; path = "Target Support Files/Pods-Faker/Pods-Faker.debug.xcconfig"; sourceTree = "<group>"; };
 		592C3DB1277D9CE300DAF7A0 /* GiftAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GiftAPI.swift; sourceTree = "<group>"; };
 		592C3DB3277DA1C000DAF7A0 /* GiftModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GiftModel.swift; sourceTree = "<group>"; };
-		592C3DB9277DA57E00DAF7A0 /* GiftView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GiftView.swift; sourceTree = "<group>"; };
+		592C3DB9277DA57E00DAF7A0 /* GiftListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GiftListView.swift; sourceTree = "<group>"; };
 		592C3DBC277DA5BA00DAF7A0 /* GiftViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GiftViewModel.swift; sourceTree = "<group>"; };
-		592C3DBE277DA6F700DAF7A0 /* GiftRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GiftRow.swift; sourceTree = "<group>"; };
+		592C3DBE277DA6F700DAF7A0 /* GiftListRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GiftListRow.swift; sourceTree = "<group>"; };
 		596AF3AC277B79820026BD91 /* FakerToolbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakerToolbar.swift; sourceTree = "<group>"; };
 		596AF3AE277B81310026BD91 /* AccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountView.swift; sourceTree = "<group>"; };
 		596AF3B1277BF6D80026BD91 /* SettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingView.swift; sourceTree = "<group>"; };
 		596AF3B4277C0B5E0026BD91 /* SettingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewModel.swift; sourceTree = "<group>"; };
 		596AF3B8277C4FD90026BD91 /* AccountViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewModel.swift; sourceTree = "<group>"; };
+		596AF3BA277DE94C0026BD91 /* GiftExchangeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GiftExchangeView.swift; sourceTree = "<group>"; };
+		596AF3BC277DE95C0026BD91 /* GiftExchangeRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GiftExchangeRow.swift; sourceTree = "<group>"; };
+		596AF3BE277DE9A30026BD91 /* GiftExchangeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GiftExchangeViewModel.swift; sourceTree = "<group>"; };
+		596AF3C0277DFC1C0026BD91 /* GiftView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GiftView.swift; sourceTree = "<group>"; };
 		59841490277A11AB00A4E858 /* PurchaseCategoryRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseCategoryRow.swift; sourceTree = "<group>"; };
 		59841495277A128100A4E858 /* UserModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		59841498277A16E200A4E858 /* PurchaseCategoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseCategoryModel.swift; sourceTree = "<group>"; };
@@ -92,7 +99,6 @@
 		59CB20752779A3FC00BD0400 /* FakerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakerUITests.swift; sourceTree = "<group>"; };
 		59CB20772779A3FC00BD0400 /* FakerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakerUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		59CB20862779AD6200BD0400 /* PurchaseCategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseCategoryView.swift; sourceTree = "<group>"; };
-		59CB208B2779B3E500BD0400 /* Tester.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tester.swift; sourceTree = "<group>"; };
 		59CB20922779B3ED00BD0400 /* UserAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserAPI.swift; sourceTree = "<group>"; };
 		59CB2094277AE96900BD0400 /* PurchaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseView.swift; sourceTree = "<group>"; };
 		59CB2096277AEA0900BD0400 /* PurchaseRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseRow.swift; sourceTree = "<group>"; };
@@ -141,8 +147,11 @@
 		592C3DB8277DA57000DAF7A0 /* Gift */ = {
 			isa = PBXGroup;
 			children = (
-				592C3DB9277DA57E00DAF7A0 /* GiftView.swift */,
-				592C3DBE277DA6F700DAF7A0 /* GiftRow.swift */,
+				596AF3C0277DFC1C0026BD91 /* GiftView.swift */,
+				592C3DB9277DA57E00DAF7A0 /* GiftListView.swift */,
+				592C3DBE277DA6F700DAF7A0 /* GiftListRow.swift */,
+				596AF3BA277DE94C0026BD91 /* GiftExchangeView.swift */,
+				596AF3BC277DE95C0026BD91 /* GiftExchangeRow.swift */,
 			);
 			path = Gift;
 			sourceTree = "<group>";
@@ -151,6 +160,7 @@
 			isa = PBXGroup;
 			children = (
 				592C3DBC277DA5BA00DAF7A0 /* GiftViewModel.swift */,
+				596AF3BE277DE9A30026BD91 /* GiftExchangeViewModel.swift */,
 			);
 			path = Gift;
 			sourceTree = "<group>";
@@ -311,7 +321,6 @@
 				596AF3B6277C4FBA0026BD91 /* Account */,
 				596AF3B7277C4FC00026BD91 /* Setting */,
 				598414A0277A23BD00A4E858 /* FakerResponse.swift */,
-				59CB208B2779B3E500BD0400 /* Tester.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -518,6 +527,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				59CB209B277AEC7300BD0400 /* FakerViewModel.swift in Sources */,
+				596AF3C1277DFC1C0026BD91 /* GiftView.swift in Sources */,
 				59CB205C2779A3FA00BD0400 /* ContentView.swift in Sources */,
 				5984149D277A1BF200A4E858 /* FakerNetwork.swift in Sources */,
 				596AF3B2277BF6D80026BD91 /* SettingView.swift in Sources */,
@@ -525,11 +535,12 @@
 				596AF3AF277B81310026BD91 /* AccountView.swift in Sources */,
 				59CB2095277AE96900BD0400 /* PurchaseView.swift in Sources */,
 				59841491277A11AB00A4E858 /* PurchaseCategoryRow.swift in Sources */,
+				596AF3BD277DE95C0026BD91 /* GiftExchangeRow.swift in Sources */,
 				59CB205A2779A3FA00BD0400 /* FakerApp.swift in Sources */,
 				59CB20932779B3ED00BD0400 /* UserAPI.swift in Sources */,
-				592C3DBF277DA6F700DAF7A0 /* GiftRow.swift in Sources */,
-				592C3DBA277DA57E00DAF7A0 /* GiftView.swift in Sources */,
-				59CB208E2779B3E500BD0400 /* Tester.swift in Sources */,
+				596AF3BF277DE9A30026BD91 /* GiftExchangeViewModel.swift in Sources */,
+				592C3DBF277DA6F700DAF7A0 /* GiftListRow.swift in Sources */,
+				592C3DBA277DA57E00DAF7A0 /* GiftListView.swift in Sources */,
 				596AF3B9277C4FD90026BD91 /* AccountViewModel.swift in Sources */,
 				59CB209D277AED2D00BD0400 /* UserViewModel.swift in Sources */,
 				592C3DBD277DA5BA00DAF7A0 /* GiftViewModel.swift in Sources */,
@@ -543,6 +554,7 @@
 				59CB209F277AFCFA00BD0400 /* PurchaseHeader.swift in Sources */,
 				592C3DB2277D9CE300DAF7A0 /* GiftAPI.swift in Sources */,
 				596AF3B5277C0B5E0026BD91 /* SettingViewModel.swift in Sources */,
+				596AF3BB277DE94C0026BD91 /* GiftExchangeView.swift in Sources */,
 				59CB2097277AEA0900BD0400 /* PurchaseRow.swift in Sources */,
 				59CB20A2277B02F800BD0400 /* ColorExtension.swift in Sources */,
 			);

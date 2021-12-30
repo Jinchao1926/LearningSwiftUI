@@ -8,30 +8,39 @@
 import SwiftUI
 
 struct GiftView: View {
-    @EnvironmentObject private var viewModel: GiftViewModel
+    @EnvironmentObject var viewModel: GiftExchangeViewModel
     
     var body: some View {
-        List {
-            if viewModel.gifts.count == 0 {
+        HStack {
+            GiftListView()
+            
+            //
+            VStack {
                 HStack {
+                    Button {
+                        viewModel.timing()
+                    } label: {
+                        Text("定 时")
+                            .modifier(ConfirmTextModifier())
+                    }
+                    .buttonStyle(PlainButtonStyle())
+                    .padding([.top, .trailing], 8)
+                    
                     Spacer()
-                    ProgressView()
-                        .progressViewStyle(CircularProgressViewStyle(tint: .gray))
-                        .scaleEffect(x: 0.8, y: 0.8, anchor: .center)
-                    Spacer()
+                    
+                    Button {
+                        viewModel.doExchange()
+                    } label: {
+                        Text("测 试")
+                            .modifier(ConfirmTextModifier())
+                    }
+                    .buttonStyle(PlainButtonStyle())
+                    .padding([.top, .trailing], 8)
                 }
+                
+                GiftExchangeView()
             }
-            ForEach(viewModel.gifts.indices, id: \.self) { idx in
-                GiftRow(id: viewModel.gifts[idx]?.id, name: viewModel.gifts[idx]?.name, index: idx)
-            }
-        }.onAppear(perform: {
-            viewModel.fetchGiftList()
-        }).listStyle(InsetListStyle())  // SidebarListStyle - 可收缩
-    }
-}
-
-struct GiftView_Previews: PreviewProvider {
-    static var previews: some View {
-        GiftView()
+            
+        }
     }
 }

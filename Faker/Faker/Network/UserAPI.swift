@@ -30,8 +30,8 @@ extension UserAPI: FakerNetwork {
              "MallID": 10025,
              "Mobile": "16605911007",
              "SNSType": 0,
-             "Pwd": "Linger1007",
-             "VCode": "",
+             "Pwd": "Linger1007",   //密码
+             "VCode": "",   //验证码
              "LoginType": 1,
              "OauthID": null,
              "Keyword": "",
@@ -46,10 +46,10 @@ extension UserAPI: FakerNetwork {
                           "Mobile": phone,
                           "Pwd": password,
                           "SNSType": 0,
-                          "LoginType": 1,
+                          "LoginType": 1,   //1:密码登录 2:验证码登录
                           "Scene": 4,
                           "GraphicType": 2] as [String : Any]
-            return .requestParameters(parameters: parmeters, encoding: URLEncoding.default)
+            return .requestParameters(parameters: parmeters, encoding: JSONEncoding.default)
         }
     }
 }

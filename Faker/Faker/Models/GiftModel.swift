@@ -15,6 +15,9 @@ struct GiftModel: HandyJSON {
     var remain: Int?    //库存
     var sold: Int?      //已售
     
+    var state: State = .idle
+    var message: String?
+    
     /*
      "id": 143641,
      "n": "Apple AirPods",
