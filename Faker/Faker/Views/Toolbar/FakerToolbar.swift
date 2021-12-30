@@ -26,6 +26,10 @@ struct FakerToolbar: View {
                         Label("设置", systemImage: "gear")
                     }
                 }
+                Divider()
+                NavigationLink(destination: GiftView()) {
+                    Label("兑换", systemImage: "purchased.circle")
+                }
             }.listStyle(SidebarListStyle())  // SidebarListStyle - 可收缩
         }//.frame(minWidth: 200, maxWidth: .infinity, minHeight: 500, maxHeight: .infinity)
         .disabled(viewModel.isPurchasing)

@@ -15,6 +15,7 @@ struct FakerApp: App {
                 .environmentObject(PurchaseCategoryViewModel())
                 .environmentObject(FakerViewModel.shared)
                 .environmentObject(SettingViewModel.shared)
+                .environmentObject(GiftViewModel())
                 .background(Color("GrayBackground"))
                 .onAppear {
                     FakerViewModel.shared.bulkAccountsLoading()
