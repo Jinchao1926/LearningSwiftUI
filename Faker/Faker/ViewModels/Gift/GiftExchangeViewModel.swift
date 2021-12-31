@@ -130,7 +130,7 @@ class GiftExchangeViewModel: ObservableObject, FakerResponse {
     }
     
     func timing() {
-       targetDate = Calendar.current.date(bySettingHour: 9, minute: 59, second: 59, of: Date())
+       targetDate = Calendar.current.date(bySettingHour: 8, minute: 59, second: 59, of: Date())
         timer = Timer(timeInterval: 0.5, target: self, selector: #selector(startExchangingTimer), userInfo: nil, repeats: true)
         if let theTimer = timer {
             RunLoop.main.add(theTimer, forMode: .common)
