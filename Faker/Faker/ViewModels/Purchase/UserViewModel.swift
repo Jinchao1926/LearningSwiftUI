@@ -93,7 +93,8 @@ class UserViewModel: HandyJSON, FakerResponse {
         let tuanID: String = String(category.id ?? 0)
         let count: Int = category.buyLimit ?? 5
         let price: Float = category.price ?? 1
-        PurchaseProvider.request(PurchaseAPI.order(token: token, tuanID: tuanID, price: price, count: count)) { [weak self] result in
+        let version: Int = category.version ?? 6 //6 - 79抵用100
+        PurchaseProvider.request(PurchaseAPI.order(token: token, tuanID: tuanID, price: price, count: count, version: version)) { [weak self] result in
             switch result {
             case let .success(response):
                 if let jsonDict = self?.format(response) {

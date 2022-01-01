@@ -14,10 +14,8 @@ class FakerViewModel: ObservableObject {
     
     private var setting: SettingViewModel = SettingViewModel.shared
     
-    @Published private(set) var isPurchasing: Bool = false
     @Published private(set) var users: [UserViewModel?] = []
     private let queue = DispatchQueue(label: "com.faker.purchase")
-    private let group = DispatchGroup()
     
     //MARK:-
     func bulkReset() {
@@ -41,22 +39,13 @@ class FakerViewModel: ObservableObject {
     }
     
     func bulkPurchasing(with category: PurchaseCategoryModel) {
-        isPurchasing = true
-        self.objectWillChange.send()
-        
         print("[bulkPurchasing] interval: \(setting.intInterval), groupCount: \(setting.intGroupCount), groupInterval: \(setting.intGroupInterval)")
         
         queue.async {
             let count = self.users.count
             
             for (idx, viewModel) in self.users.enumerated() {
-                self.group.enter()
-                
                 viewModel?.purchase(category) { [weak self] state in
-                    if state == .success || state == .failure {
-                        self?.group.leave()
-                    }
-                    
                     DispatchQueue.main.async {
                         // https://stackoverflow.com/questions/57459727/why-is-an-observedobject-array-not-updated-in-my-swiftui-application
                         self?.objectWillChange.send()
@@ -76,13 +65,6 @@ class FakerViewModel: ObservableObject {
                 else {
                     sleep(self.setting.intInterval)    // setting.interval (s)
                 }
-            }
-        }
-        
-        self.group.notify(queue: queue) {
-            DispatchQueue.main.async {
-                self.isPurchasing = false
-                self.objectWillChange.send()
             }
         }
     }

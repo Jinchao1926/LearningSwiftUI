@@ -32,7 +32,6 @@ struct FakerToolbar: View {
                 }
             }.listStyle(SidebarListStyle())  // SidebarListStyle - 可收缩
         }//.frame(minWidth: 200, maxWidth: .infinity, minHeight: 500, maxHeight: .infinity)
-        .disabled(viewModel.isPurchasing)
     }
 }
 

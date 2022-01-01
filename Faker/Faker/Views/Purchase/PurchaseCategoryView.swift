@@ -35,6 +35,5 @@ struct PurchaseCategoryView: View {
                 viewModel.fetchPurchaseList()
             }).listStyle(InsetListStyle())  // SidebarListStyle - 可收缩
         }
-        .disabled(fakerViewModel.isPurchasing)
     }
 }

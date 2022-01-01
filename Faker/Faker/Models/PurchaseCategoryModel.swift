@@ -13,6 +13,7 @@ struct PurchaseCategoryModel: HandyJSON {
     var type: Int?
     var buyLimit: Int?
     var price: Float?
+    var version: Int?
     
     /*
     "Id": 169612,
@@ -34,6 +35,7 @@ struct PurchaseCategoryModel: HandyJSON {
         mapper <<< type <-- "Type"
         mapper <<< buyLimit <-- "BuyLimit"
         mapper <<< price <-- "Price"
+        mapper <<< version <-- "Version"
     }
 }
 

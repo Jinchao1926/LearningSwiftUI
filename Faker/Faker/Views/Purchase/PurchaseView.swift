@@ -8,11 +8,7 @@
 import SwiftUI
 
 struct PurchaseView: View {
-    var category: PurchaseCategoryModel {
-        didSet {
-//            viewModel.bulkReset()
-        }
-    }
+    var category: PurchaseCategoryModel
 
     @EnvironmentObject private var viewModel: FakerViewModel
     @EnvironmentObject private var settings: SettingViewModel

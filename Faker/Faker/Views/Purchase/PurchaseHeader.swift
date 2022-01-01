@@ -26,7 +26,6 @@ struct PurchaseHeader: View {
                 .onTapGesture {
                     action()
                 }
-                .disabled(viewModel.isPurchasing)
         }.padding([.leading, .top, .trailing])
     }
 }
