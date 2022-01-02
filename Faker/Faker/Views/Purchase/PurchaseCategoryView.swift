@@ -31,9 +31,12 @@ struct PurchaseCategoryView: View {
                         }
                     }
                 }
-            }.onAppear(perform: {
+            }
+            .onAppear(perform: {
                 viewModel.fetchPurchaseList()
-            }).listStyle(InsetListStyle())  // SidebarListStyle - 可收缩
+            })
+            .listStyle(InsetListStyle())  // SidebarListStyle - 可收缩
+            .frame(minWidth: 200, idealWidth: 300, maxWidth: 300, minHeight: 500, idealHeight: 500, maxHeight: .infinity)
         }
     }
 }

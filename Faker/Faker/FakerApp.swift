@@ -15,6 +15,7 @@ struct FakerApp: App {
                 .environmentObject(PurchaseCategoryViewModel())
                 .environmentObject(FakerViewModel.shared)
                 .environmentObject(SettingViewModel.shared)
+                .environmentObject(CouponViewModel())
                 .environmentObject(GiftViewModel())
                 .environmentObject(GiftExchangeViewModel())
                 .background(Color("GrayBackground"))

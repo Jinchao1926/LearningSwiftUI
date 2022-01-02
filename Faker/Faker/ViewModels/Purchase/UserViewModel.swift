@@ -13,12 +13,16 @@ enum State: Int {
     case loading = 1
     case success = 2
     case failure = 3
+    
+    var isFinished: Bool { self == .success || self == .failure }
 }
 
 class UserViewModel: HandyJSON, FakerResponse {
     private(set) var phone: String?
     private(set) var password: String?
     private(set) var token: String?
+    
+    private(set) var couponCount: Int = 0
 
     private(set) var state: State = .idle
     private(set) var message: String?
@@ -29,11 +33,24 @@ class UserViewModel: HandyJSON, FakerResponse {
         mapper <<< phone <-- "phone"
         mapper <<< password <-- "password"
         mapper <<< token <-- "token"
+//        mapper <<< state <-- "state"
+//        mapper <<< message <-- "message"
     }
 
     required init() {}
 
-    func purchase(_ category: PurchaseCategoryModel, completion: @escaping (_ state: State) -> Void) {
+    //MARK:- Purchase
+    func purchase(_ category: PurchaseCategoryModel, completion: @escaping (_ state: State, _ reLogin: Bool) -> Void) {
+        if let token = self.token {
+            // already logined
+            self.createOrder(with: token, category: category) { [weak self] state, error in
+                self?.state = state
+                self?.message = error
+                completion(state, false)
+            }
+            return
+        }
+        
         login { [weak self] loginState, loginError in
             guard let self = self else { return }
 
@@ -43,7 +60,7 @@ class UserViewModel: HandyJSON, FakerResponse {
                     self.createOrder(with: token, category: category) { [weak self] state, error in
                         self?.state = state
                         self?.message = error
-                        completion(state)
+                        completion(state, true)
                     }
                     return
                 }
@@ -51,7 +68,7 @@ class UserViewModel: HandyJSON, FakerResponse {
             
             self.state = loginState
             self.message = loginError
-            completion(loginState)
+            completion(loginState, true)
         }
     }
 
@@ -105,6 +122,64 @@ class UserViewModel: HandyJSON, FakerResponse {
                     else {
                         print("error:", jsonDict.2)
                         completion(.failure, jsonDict.2)
+                    }
+                    return
+                }
+                completion(.failure, nil)
+
+            case let .failure(error):
+                completion(.failure, error.errorDescription)
+            }
+        }
+    }
+    
+    //MARK:- Coupon
+    func coupon(completion: @escaping (_ state: State, _ reLogin: Bool) -> Void) {
+        if let token = self.token {
+            // already logined
+            self.fetchCouponCount(with: token) { [weak self] state, error in
+                self?.state = state
+                self?.message = error
+                completion(state, false)
+            }
+            return
+        }
+        
+        login { [weak self] loginState, loginError in
+            guard let self = self else { return }
+
+            if loginState == .success {
+                if let token = self.token {
+                    // login success
+                    self.fetchCouponCount(with: token) { [weak self] state, error in
+                        self?.state = state
+                        self?.message = error
+                        completion(state, true)
+                    }
+                    return
+                }
+            }
+            
+            self.state = loginState
+            self.message = loginError
+            completion(loginState, true)
+        }
+    }
+    
+    private func fetchCouponCount(with token: String, completion: @escaping (_ state: State, _ error: String?) -> Void) {
+        completion(.loading, nil)
+        UserProvider.request(UserAPI.couponCount(token: token)) { [weak self] result in
+            switch result {
+            case let .success(response):
+                if let jsonDict = try? response.mapJSON() as? NSDictionary {
+                    if let count = jsonDict["d"] as? Int {
+                        // success
+                        self?.couponCount = count
+                        completion(.success, nil)
+                    }
+                    else {
+                        print("error:", jsonDict["e"])
+                        completion(.failure, jsonDict["e"] as? String)
                     }
                     return
                 }

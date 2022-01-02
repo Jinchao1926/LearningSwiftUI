@@ -17,7 +17,7 @@ struct PurchaseRow: View {
     let index: Int?
     
     var title: String {
-        String(format: "[%02d] %@ (%@)", index ?? 0, phone ?? "", password ?? "")
+        String(format: "[%02d] %@ (%@)", (index ?? 0) + 1, phone ?? "", password ?? "")
     }
     
     @SwiftUI.State private var presentingToast: Bool = false

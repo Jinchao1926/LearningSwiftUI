@@ -78,4 +78,13 @@ class AccountViewModel {
         
         return ""
     }
+    
+    //
+    func cacheToPlist(users: [UserViewModel?]) -> Bool {
+        let theUsers = users.compactMap{ $0 }
+        let array = theUsers.toJSON() as NSArray
+        
+        let ret = array.write(toFile: path, atomically: true)
+        return ret
+    }
 }

@@ -15,7 +15,7 @@ struct GiftListRow: View {
     let index: Int?
     
     var title: String {
-        String(format: "[%02d] %@ (%d)", index ?? 0, name ?? "", id ?? 0)
+        String(format: "[%02d] %@ (%d)", (index ?? 0) + 1, name ?? "", id ?? 0)
     }
     
     @SwiftUI.State private var presentingToast: Bool = false

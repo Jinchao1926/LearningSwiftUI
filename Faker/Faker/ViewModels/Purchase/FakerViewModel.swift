@@ -34,23 +34,41 @@ class FakerViewModel: ObservableObject {
     func bulkPurchasing(with category: PurchaseCategoryModel) {
         print("[bulkPurchasing] interval: \(setting.intInterval), groupCount: \(setting.intGroupCount), groupInterval: \(setting.intGroupInterval)")
         
+        var isRelogin: Bool = false
+        
         queue.async {
             let count = self.users.count
             
             for (idx, viewModel) in self.users.enumerated() {
-                viewModel?.purchase(category) { [weak self] state in
+                viewModel?.purchase(category) { [weak self] state, relogin in
+                    print("state: \(state) relogin: \(relogin)")
+                    guard let self = self else { return }
+                    
+                    if state.isFinished {
+                        isRelogin = isRelogin || relogin
+                        
+                        // cache when relogin
+                        if idx == count - 1 {
+                            if isRelogin {
+                                let _ = AccountViewModel.shared.cacheToPlist(users: self.users)
+                            }
+                        }
+                    }
+                    
                     DispatchQueue.main.async {
                         // https://stackoverflow.com/questions/57459727/why-is-an-observedobject-array-not-updated-in-my-swiftui-application
-                        self?.objectWillChange.send()
+                        self.objectWillChange.send()
                     }
                 }
-                print("idx[\(idx)] purchase")
                 
+                // log
+                print("idx[\(idx)] purchase")
                 if idx == count - 1 {
                     print("bulk purchasing finished!")
                     return
                 }
                 
+                // sleep
                 if (idx + 1) % self.setting.intGroupCount == 0 {
                     print("grouping")
                     Thread.sleep(forTimeInterval: self.setting.intGroupInterval * 60)   // setting.groupInterval (mins)
@@ -59,6 +77,44 @@ class FakerViewModel: ObservableObject {
                     Thread.sleep(forTimeInterval: self.setting.intInterval) // setting.interval (s)
                 }
             }
+        }
+    }
+    
+    func bulkCoupons() {
+        var isRelogin: Bool = false
+        let count = self.users.count
+            
+        for (idx, viewModel) in self.users.enumerated() {
+            viewModel?.coupon() { [weak self] state, relogin in
+                print("state: \(state) relogin: \(relogin)")
+                guard let self = self else { return }
+                
+                if state.isFinished {
+                    isRelogin = isRelogin || relogin
+                    
+                    // cache when relogin
+                    if idx == count - 1 {
+                        if isRelogin {
+                            let _ = AccountViewModel.shared.cacheToPlist(users: self.users)
+                        }
+                    }
+                }
+                
+                DispatchQueue.main.async {
+                    // https://stackoverflow.com/questions/57459727/why-is-an-observedobject-array-not-updated-in-my-swiftui-application
+                    self.objectWillChange.send()
+                }
+            }
+            
+            // log
+            print("idx[\(idx)] coupon")
+            if idx == count - 1 {
+                print("bulk coupons finished!")
+                return
+            }
+            
+            // sleep
+            Thread.sleep(forTimeInterval: 0.05)
         }
     }
 }

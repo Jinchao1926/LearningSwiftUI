@@ -11,6 +11,7 @@ let UserProvider = MoyaProvider<UserAPI>()
 
 enum UserAPI {
     case login(phone: String, password: String)
+    case couponCount(token: String)
 }
 
 extension UserAPI: FakerNetwork {
@@ -18,6 +19,9 @@ extension UserAPI: FakerNetwork {
         switch self {
         case .login(_, _):
             return "passport/user/Login"
+        
+        case .couponCount:
+            return "user/Coupon/GetMyCouponCount"
         }
     }
     
@@ -49,6 +53,24 @@ extension UserAPI: FakerNetwork {
                           "LoginType": 1,   //1:密码登录 2:验证码登录
                           "Scene": 4,
                           "GraphicType": 2] as [String : Any]
+            return .requestParameters(parameters: parmeters, encoding: JSONEncoding.default)
+            
+        case .couponCount(let token):
+            /*
+             {
+                 "MallID": 10025,
+                 "SearchType": 1,
+                 "PlatformTypeList": [1],
+                 "Header": {
+                     "Token": "wmGn7I_nWkmkXUHxoJgmfgFcbAFy3qRk,15047"
+                 }
+             }
+             */
+            let header = [ "Token": token ]
+            parmeters = [ "MallID": 10025,
+                          "SearchType": 1,
+                          "PlatformTypeList": [1],
+                          "Header": header ] as [String : Any]
             return .requestParameters(parameters: parmeters, encoding: JSONEncoding.default)
         }
     }

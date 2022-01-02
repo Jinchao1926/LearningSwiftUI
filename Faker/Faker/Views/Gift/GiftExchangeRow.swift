@@ -16,7 +16,7 @@ struct GiftExchangeRow: View {
     var index: Int?
     
     var title: String {
-        String(format: "[%02d] %@ (%d)", index ?? 0, name ?? "", id ?? "0")
+        String(format: "[%02d] %@ (%d)", (index ?? 0) + 1, name ?? "", id ?? "0")
     }
     
     var body: some View {

@@ -1,13 +1,31 @@
 //
-//  PurchaseHeader.swift
+//  CouponListRow.swift
 //  Faker
 //
-//  Created by 林锦超 on 2021/12/28.
+//  Created by 林锦超 on 2022/1/2.
 //
 
 import SwiftUI
 
-struct PurchaseHeader: View {
+struct CouponListRow: View {
+    let fontSize: CGFloat = 14
+    var id: String?
+    var name: String?
+    let index: Int?
+    
+    var title: String {
+        String(format: "[%02d] %@ (%d)", (index ?? 0) + 1, name ?? "", id ?? "")
+    }
+    
+    var body: some View {
+        Text(title)
+            .font(.system(size: fontSize))
+            .foregroundColor(Color(.black))
+            .fixedSize(horizontal: true, vertical: false)
+    }
+}
+
+struct CouponHeader: View {
     var title: String
     var action: () -> Void
     
@@ -25,22 +43,5 @@ struct PurchaseHeader: View {
                     action()
                 }
         }.padding([.leading, .top, .trailing])
-    }
-}
-
-struct PurchaseFooter: View {
-    var interval: TimeInterval
-    var groupCount: Int
-    var groupInterval: TimeInterval
-    
-    var title: String {
-        String(format: "Tips: [%d个]账号一组，组间间隔[%.2f分钟]，组内间隔[%.2f秒]", groupCount, groupInterval, interval)
-    }
-    
-    var body: some View {
-        Text(title)
-            .font(.footnote)
-            .lineLimit(1)
-            .padding([.leading, .bottom, .trailing])
     }
 }

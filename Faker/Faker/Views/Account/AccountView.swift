@@ -42,7 +42,7 @@ struct AccountView: View {
                 .textSelection(.enabled)
                 .accentColor(Color("BlueBackground"))
         }
-        .frame(minWidth: 400, idealWidth: 500, maxWidth: 500, minHeight: 200, idealHeight: 300, maxHeight: .infinity, alignment: .center)
+        .frame(minWidth: 400, idealWidth: 600, maxWidth: 600, minHeight: 300, idealHeight: 300, maxHeight: .infinity, alignment: .center)
         .padding()
         .onAppear {
             data = viewModel.readPlistUserStrings()
@@ -56,9 +56,18 @@ struct AccountTipsView: View {
 18688888888 123456
 18699999999 123456
 """
+    let importantTips = """
+@@ 【团购】【券包】等登录成功会缓存 token 到本地
+@@ 点击右侧【确定】按钮重新导入账号可以清除本地 token
+"""
     var body: some View {
-        Text(tips)
-            .textSelection(.enabled)
+        VStack(alignment: .leading) {
+            Text(importantTips)
+                .foregroundColor(.red)
+                .padding(.bottom, 5)
+            Text(tips)
+                .textSelection(.enabled)
+        }
     }
 }
 

@@ -13,6 +13,12 @@
 		592C3DBA277DA57E00DAF7A0 /* GiftListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 592C3DB9277DA57E00DAF7A0 /* GiftListView.swift */; };
 		592C3DBD277DA5BA00DAF7A0 /* GiftViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 592C3DBC277DA5BA00DAF7A0 /* GiftViewModel.swift */; };
 		592C3DBF277DA6F700DAF7A0 /* GiftListRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 592C3DBE277DA6F700DAF7A0 /* GiftListRow.swift */; };
+		5931289A27817F4B00E8DF1D /* AccountListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5931289927817F4B00E8DF1D /* AccountListView.swift */; };
+		5931289D278181BD00E8DF1D /* CouponAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5931289C278181BC00E8DF1D /* CouponAPI.swift */; };
+		593128A0278182D300E8DF1D /* CouponViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5931289F278182D300E8DF1D /* CouponViewModel.swift */; };
+		593128A22781848200E8DF1D /* CouponListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 593128A12781848200E8DF1D /* CouponListView.swift */; };
+		593128A42781848F00E8DF1D /* CouponListRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 593128A32781848F00E8DF1D /* CouponListRow.swift */; };
+		593128A6278184FA00E8DF1D /* CouponModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 593128A5278184FA00E8DF1D /* CouponModel.swift */; };
 		596AF3AD277B79820026BD91 /* FakerToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 596AF3AC277B79820026BD91 /* FakerToolbar.swift */; };
 		596AF3AF277B81310026BD91 /* AccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 596AF3AE277B81310026BD91 /* AccountView.swift */; };
 		596AF3B2277BF6D80026BD91 /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 596AF3B1277BF6D80026BD91 /* SettingView.swift */; };
@@ -71,6 +77,12 @@
 		592C3DB9277DA57E00DAF7A0 /* GiftListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GiftListView.swift; sourceTree = "<group>"; };
 		592C3DBC277DA5BA00DAF7A0 /* GiftViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GiftViewModel.swift; sourceTree = "<group>"; };
 		592C3DBE277DA6F700DAF7A0 /* GiftListRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GiftListRow.swift; sourceTree = "<group>"; };
+		5931289927817F4B00E8DF1D /* AccountListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountListView.swift; sourceTree = "<group>"; };
+		5931289C278181BC00E8DF1D /* CouponAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CouponAPI.swift; sourceTree = "<group>"; };
+		5931289F278182D300E8DF1D /* CouponViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CouponViewModel.swift; sourceTree = "<group>"; };
+		593128A12781848200E8DF1D /* CouponListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CouponListView.swift; sourceTree = "<group>"; };
+		593128A32781848F00E8DF1D /* CouponListRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CouponListRow.swift; sourceTree = "<group>"; };
+		593128A5278184FA00E8DF1D /* CouponModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CouponModel.swift; sourceTree = "<group>"; };
 		596AF3AC277B79820026BD91 /* FakerToolbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakerToolbar.swift; sourceTree = "<group>"; };
 		596AF3AE277B81310026BD91 /* AccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountView.swift; sourceTree = "<group>"; };
 		596AF3B1277BF6D80026BD91 /* SettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingView.swift; sourceTree = "<group>"; };
@@ -163,6 +175,23 @@
 				596AF3BE277DE9A30026BD91 /* GiftExchangeViewModel.swift */,
 			);
 			path = Gift;
+			sourceTree = "<group>";
+		};
+		5931289B278181A400E8DF1D /* Coupon */ = {
+			isa = PBXGroup;
+			children = (
+				593128A12781848200E8DF1D /* CouponListView.swift */,
+				593128A32781848F00E8DF1D /* CouponListRow.swift */,
+			);
+			path = Coupon;
+			sourceTree = "<group>";
+		};
+		5931289E278182BB00E8DF1D /* Coupon */ = {
+			isa = PBXGroup;
+			children = (
+				5931289F278182D300E8DF1D /* CouponViewModel.swift */,
+			);
+			path = Coupon;
 			sourceTree = "<group>";
 		};
 		596AF3AB277B79630026BD91 /* Toolbar */ = {
@@ -276,6 +305,7 @@
 			children = (
 				596AF3AB277B79630026BD91 /* Toolbar */,
 				59CB20882779B22700BD0400 /* Purchase */,
+				5931289B278181A400E8DF1D /* Coupon */,
 				592C3DB8277DA57000DAF7A0 /* Gift */,
 				59CB20892779B24400BD0400 /* Account */,
 				596AF3B0277BF6C50026BD91 /* Setting */,
@@ -288,6 +318,7 @@
 			children = (
 				59841495277A128100A4E858 /* UserModel.swift */,
 				59841498277A16E200A4E858 /* PurchaseCategoryModel.swift */,
+				593128A5278184FA00E8DF1D /* CouponModel.swift */,
 				592C3DB3277DA1C000DAF7A0 /* GiftModel.swift */,
 			);
 			path = Models;
@@ -309,6 +340,7 @@
 			isa = PBXGroup;
 			children = (
 				596AF3AE277B81310026BD91 /* AccountView.swift */,
+				5931289927817F4B00E8DF1D /* AccountListView.swift */,
 			);
 			path = Account;
 			sourceTree = "<group>";
@@ -317,6 +349,7 @@
 			isa = PBXGroup;
 			children = (
 				596AF3B3277C0B180026BD91 /* Purchase */,
+				5931289E278182BB00E8DF1D /* Coupon */,
 				592C3DBB277DA5AB00DAF7A0 /* Gift */,
 				596AF3B6277C4FBA0026BD91 /* Account */,
 				596AF3B7277C4FC00026BD91 /* Setting */,
@@ -331,6 +364,7 @@
 				5984149C277A1BF200A4E858 /* FakerNetwork.swift */,
 				59CB20922779B3ED00BD0400 /* UserAPI.swift */,
 				5984149A277A1A8A00A4E858 /* PurchaseAPI.swift */,
+				5931289C278181BC00E8DF1D /* CouponAPI.swift */,
 				592C3DB1277D9CE300DAF7A0 /* GiftAPI.swift */,
 			);
 			path = Network;
@@ -535,6 +569,7 @@
 				596AF3AF277B81310026BD91 /* AccountView.swift in Sources */,
 				59CB2095277AE96900BD0400 /* PurchaseView.swift in Sources */,
 				59841491277A11AB00A4E858 /* PurchaseCategoryRow.swift in Sources */,
+				593128A6278184FA00E8DF1D /* CouponModel.swift in Sources */,
 				596AF3BD277DE95C0026BD91 /* GiftExchangeRow.swift in Sources */,
 				59CB205A2779A3FA00BD0400 /* FakerApp.swift in Sources */,
 				59CB20932779B3ED00BD0400 /* UserAPI.swift in Sources */,
@@ -542,10 +577,13 @@
 				592C3DBF277DA6F700DAF7A0 /* GiftListRow.swift in Sources */,
 				592C3DBA277DA57E00DAF7A0 /* GiftListView.swift in Sources */,
 				596AF3B9277C4FD90026BD91 /* AccountViewModel.swift in Sources */,
+				593128A0278182D300E8DF1D /* CouponViewModel.swift in Sources */,
 				59CB209D277AED2D00BD0400 /* UserViewModel.swift in Sources */,
 				592C3DBD277DA5BA00DAF7A0 /* GiftViewModel.swift in Sources */,
 				592C3DB4277DA1C000DAF7A0 /* GiftModel.swift in Sources */,
 				59CB20872779AD6200BD0400 /* PurchaseCategoryView.swift in Sources */,
+				5931289A27817F4B00E8DF1D /* AccountListView.swift in Sources */,
+				593128A42781848F00E8DF1D /* CouponListRow.swift in Sources */,
 				5984149F277A206B00A4E858 /* PurchaseCategoryViewModel.swift in Sources */,
 				596AF3AD277B79820026BD91 /* FakerToolbar.swift in Sources */,
 				5984149B277A1A8A00A4E858 /* PurchaseAPI.swift in Sources */,
@@ -556,7 +594,9 @@
 				596AF3B5277C0B5E0026BD91 /* SettingViewModel.swift in Sources */,
 				596AF3BB277DE94C0026BD91 /* GiftExchangeView.swift in Sources */,
 				59CB2097277AEA0900BD0400 /* PurchaseRow.swift in Sources */,
+				5931289D278181BD00E8DF1D /* CouponAPI.swift in Sources */,
 				59CB20A2277B02F800BD0400 /* ColorExtension.swift in Sources */,
+				593128A22781848200E8DF1D /* CouponListView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -717,7 +757,7 @@
 				CODE_SIGN_ENTITLEMENTS = Faker/Faker.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 20220102;
 				DEVELOPMENT_ASSET_PATHS = "\"Faker/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -726,7 +766,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MARKETING_VERSION = 1.0.1;
+				MARKETING_VERSION = 1.1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.jinchao1991.Faker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -743,7 +783,7 @@
 				CODE_SIGN_ENTITLEMENTS = Faker/Faker.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 20220102;
 				DEVELOPMENT_ASSET_PATHS = "\"Faker/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -752,7 +792,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MARKETING_VERSION = 1.0.1;
+				MARKETING_VERSION = 1.1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.jinchao1991.Faker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;

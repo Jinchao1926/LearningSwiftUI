@@ -17,6 +17,9 @@ struct FakerToolbar: View {
                 NavigationLink(destination: PurchaseCategoryView()) {
                     Label("团购", systemImage: "purchased.circle")
                 }
+                NavigationLink(destination: AccountListView()) {
+                    Label("券包", systemImage: "folder.circle")
+                }
                 Divider()
                 Group {
                     NavigationLink(destination: AccountView()) {
@@ -28,8 +31,9 @@ struct FakerToolbar: View {
                 }
                 Divider()
                 NavigationLink(destination: GiftView()) {
-                    Label("兑换", systemImage: "purchased.circle")
+                    Label("兑换", systemImage: "purchased")
                 }
+                .disabled(true)
             }.listStyle(SidebarListStyle())  // SidebarListStyle - 可收缩
         }//.frame(minWidth: 200, maxWidth: .infinity, minHeight: 500, maxHeight: .infinity)
     }
