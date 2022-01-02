@@ -18,37 +18,35 @@ enum State: Int {
 class UserViewModel: HandyJSON, FakerResponse {
     private(set) var phone: String?
     private(set) var password: String?
+    private(set) var token: String?
 
     private(set) var state: State = .idle
     private(set) var message: String?
 
-    private(set) var user: UserModel?
+//    private(set) var user: UserModel?
 
     func mapping(mapper: HelpingMapper) {
         mapper <<< phone <-- "phone"
         mapper <<< password <-- "password"
-        mapper <<< state <-- "state"
+        mapper <<< token <-- "token"
     }
 
     required init() {}
-    
-    func reset() {
-        state = .idle
-        message = nil
-    }
 
     func purchase(_ category: PurchaseCategoryModel, completion: @escaping (_ state: State) -> Void) {
         login { [weak self] loginState, loginError in
             guard let self = self else { return }
 
-            if loginState == .success, let token = self.user?.token {
-                // login success
-                self.createOrder(with: token, category: category) { [weak self] state, error in
-                    self?.state = state
-                    self?.message = error
-                    completion(state)
+            if loginState == .success {
+                if let token = self.token {
+                    // login success
+                    self.createOrder(with: token, category: category) { [weak self] state, error in
+                        self?.state = state
+                        self?.message = error
+                        completion(state)
+                    }
+                    return
                 }
-                return
             }
             
             self.state = loginState
@@ -67,16 +65,17 @@ class UserViewModel: HandyJSON, FakerResponse {
         UserProvider.request(UserAPI.login(phone: phone, password: password)) { [weak self] result in
             switch result {
             case let .success(response):
-                if let obj = self?.format(response), let dict = obj.0 {
-                    self?.user = UserModel.deserialize(from: dict)
+                if let obj = self?.format(response) {
+                    if let dict = obj.0 {
+                        self?.token = UserModel.deserialize(from: dict)?.token
 
-                    if let _ = self?.user?.token {
-                        completion(.success, nil)
+                        if let _ = self?.token {
+                            completion(.success, nil)
+                        }
+                        return
                     }
-                    else {
-                        print("error:", obj.2)
-                        completion(.failure, obj.2)
-                    }
+                    print("error:", obj.2)
+                    completion(.failure, obj.2)
                     return
                 }
                 completion(.failure, nil)

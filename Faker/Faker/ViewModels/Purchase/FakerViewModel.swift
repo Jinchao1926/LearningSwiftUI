@@ -18,13 +18,6 @@ class FakerViewModel: ObservableObject {
     private let queue = DispatchQueue(label: "com.faker.purchase")
     
     //MARK:-
-    func bulkReset() {
-        for user in users {
-            user?.reset()
-        }
-        self.objectWillChange.send()
-    }
-    
     func bulkAccountsLoading() {
         if let users = AccountViewModel.shared.readPlistUsers() {
             print("bulk loading \(users.count) users")
@@ -60,10 +53,10 @@ class FakerViewModel: ObservableObject {
                 
                 if (idx + 1) % self.setting.intGroupCount == 0 {
                     print("grouping")
-                    sleep(self.setting.intGroupInterval * 60)   // setting.groupInterval (mins)
+                    Thread.sleep(forTimeInterval: self.setting.intGroupInterval * 60)   // setting.groupInterval (mins)
                 }
                 else {
-                    sleep(self.setting.intInterval)    // setting.interval (s)
+                    Thread.sleep(forTimeInterval: self.setting.intInterval) // setting.interval (s)
                 }
             }
         }

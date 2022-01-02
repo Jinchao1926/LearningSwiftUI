@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import ToastUI
 
 struct PurchaseRow: View {
     let fontSize: CGFloat = 14
@@ -18,6 +19,8 @@ struct PurchaseRow: View {
     var title: String {
         String(format: "[%02d] %@ (%@)", index ?? 0, phone ?? "", password ?? "")
     }
+    
+    @SwiftUI.State private var presentingToast: Bool = false
     
     var body: some View {
         HStack {
@@ -49,7 +52,16 @@ struct PurchaseRow: View {
                     .scaleEffect(x: 1.2, y: 1.2, anchor: .center)
                     .padding(.trailing, 10)
             }
-        }.frame(minHeight: 30)
-        
+        }
+        .frame(minHeight: 30)
+        .onTapGesture(perform: {
+            NSPasteboard.general.clearContents()
+            NSPasteboard.general.setString(title, forType: .string)
+            presentingToast = true
+        })
+        .toast(isPresented: $presentingToast, dismissAfter: 1) {
+          ToastView("Copied!")
+            .toastViewStyle(SuccessToastViewStyle())
+        }
     }
 }

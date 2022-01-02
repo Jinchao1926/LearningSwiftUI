@@ -31,12 +31,12 @@ struct PurchaseHeader: View {
 }
 
 struct PurchaseFooter: View {
-    var interval: UInt32
+    var interval: TimeInterval
     var groupCount: Int
-    var groupInterval: UInt32
+    var groupInterval: TimeInterval
     
     var title: String {
-        String(format: "Tips: [%d个]账号一组，组间间隔[%d分钟]，组内间隔[%d秒]", groupCount, groupInterval, interval)
+        String(format: "Tips: [%d个]账号一组，组间间隔[%.2f分钟]，组内间隔[%.2f秒]", groupCount, groupInterval, interval)
     }
     
     var body: some View {

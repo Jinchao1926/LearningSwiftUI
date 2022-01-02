@@ -17,9 +17,9 @@ class SettingViewModel: ObservableObject {
     @Published var groupCount: String = "500"
     @Published var groupInterval: String = "1"  //min
     
-    var intInterval: UInt32 { UInt32(interval) ?? 1 }
+    var intInterval: TimeInterval { TimeInterval(interval) ?? 1 }
     var intGroupCount: Int { Int(groupCount) ?? 500 }
-    var intGroupInterval: UInt32 { UInt32(groupInterval) ?? 1 }
+    var intGroupInterval: TimeInterval { TimeInterval(groupInterval) ?? 1 }
     
     func readCache() {
         let standard = UserDefaults.standard
