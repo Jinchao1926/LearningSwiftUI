@@ -9,6 +9,13 @@ import SwiftUI
 
 @main
 struct FakerApp: App {
+    var title: String {
+        if let version = Bundle.main.releaseVersionNumber,
+            let build = Bundle.main.buildVersionNumber {
+            return "🐱Faker (v\(version)-build\(build))"
+        }
+        return "🐱Faker"
+    }
     var body: some Scene {
         WindowGroup {
             ContentView()
@@ -22,6 +29,7 @@ struct FakerApp: App {
                 .onAppear {
                     FakerViewModel.shared.bulkAccountsLoading()
                 }
+                .navigationTitle(title)
         }
     }
 }
