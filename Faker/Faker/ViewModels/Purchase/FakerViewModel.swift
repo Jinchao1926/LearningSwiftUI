@@ -17,7 +17,7 @@ class FakerViewModel: ObservableObject {
     @Published private(set) var users: [UserViewModel?] = []
     private let queue = DispatchQueue(label: "com.faker.purchase")
     
-    //MARK:-
+    // MARK: - Bulk Accounts
     func bulkAccountsLoading() {
         if let users = AccountViewModel.shared.readPlistUsers() {
             debugPrint("bulk loading \(users.count) users")
@@ -30,7 +30,10 @@ class FakerViewModel: ObservableObject {
         
         debugPrint("read plist error")
     }
-    
+}
+
+// MARK: - Bulk Purchasing
+extension FakerViewModel {
     func bulkPurchasing(with category: PurchaseCategoryModel) {
         debugPrint("[bulkPurchasing] interval: \(setting.intInterval), groupCount: \(setting.intGroupCount), groupInterval: \(setting.intGroupInterval)")
         
@@ -79,7 +82,10 @@ class FakerViewModel: ObservableObject {
             }
         }
     }
-    
+}
+
+// MARK: - Bulk Coupons
+extension FakerViewModel {
     func bulkCoupons() {
         var isRelogin: Bool = false
         let count = self.users.count
@@ -113,6 +119,47 @@ class FakerViewModel: ObservableObject {
                 return
             }
             
+            // sleep
+            Thread.sleep(forTimeInterval: 0.05)
+        }
+    }
+}
+
+// MARK: - Bulk Vips
+extension FakerViewModel {
+    func bulkVips() {
+        var isRelogin: Bool = false
+        let count = self.users.count
+
+        for (idx, viewModel) in self.users.enumerated() {
+            viewModel?.vip() { [weak self] state, relogin in
+                debugPrint("state: \(state) relogin: \(relogin)")
+                guard let self = self else { return }
+
+                if state.isFinished {
+                    isRelogin = isRelogin || relogin
+
+                    // cache when relogin
+                    if idx == count - 1 {
+                        if isRelogin {
+                            let _ = AccountViewModel.shared.cacheToPlist(users: self.users)
+                        }
+                    }
+                }
+
+                DispatchQueue.main.async {
+                    // https://stackoverflow.com/questions/57459727/why-is-an-observedobject-array-not-updated-in-my-swiftui-application
+                    self.objectWillChange.send()
+                }
+            }
+
+            // log
+            debugPrint("idx[\(idx)] vip")
+            if idx == count - 1 {
+                debugPrint("bulk vips finished!")
+                return
+            }
+
             // sleep
             Thread.sleep(forTimeInterval: 0.05)
         }

@@ -20,6 +20,9 @@ struct FakerToolbar: View {
                 NavigationLink(destination: AccountListView()) {
                     Label("券包", systemImage: "folder.circle")
                 }
+                NavigationLink(destination: VipListView()) {
+                    Label("会员", systemImage: "v.circle")
+                }
                 Divider()
                 Group {
                     NavigationLink(destination: AccountView()) {

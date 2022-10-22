@@ -50,6 +50,9 @@
 		59CB209D277AED2D00BD0400 /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59CB209C277AED2D00BD0400 /* UserViewModel.swift */; };
 		59CB209F277AFCFA00BD0400 /* PurchaseHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59CB209E277AFCFA00BD0400 /* PurchaseHeader.swift */; };
 		59CB20A2277B02F800BD0400 /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59CB20A1277B02F800BD0400 /* ColorExtension.swift */; };
+		CEB792112903D8CD003ACB01 /* VipAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB792102903D8CD003ACB01 /* VipAPI.swift */; };
+		CEB792162903DC14003ACB01 /* VipModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB792152903DC14003ACB01 /* VipModel.swift */; };
+		CEB792192903E562003ACB01 /* VipListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB792182903E562003ACB01 /* VipListView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -118,6 +121,9 @@
 		59CB209C277AED2D00BD0400 /* UserViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
 		59CB209E277AFCFA00BD0400 /* PurchaseHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseHeader.swift; sourceTree = "<group>"; };
 		59CB20A1277B02F800BD0400 /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
+		CEB792102903D8CD003ACB01 /* VipAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VipAPI.swift; sourceTree = "<group>"; };
+		CEB792152903DC14003ACB01 /* VipModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VipModel.swift; sourceTree = "<group>"; };
+		CEB792182903E562003ACB01 /* VipListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VipListView.swift; sourceTree = "<group>"; };
 		EC70D9910961BD75980B99F9 /* Pods-Faker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Faker.release.xcconfig"; path = "Target Support Files/Pods-Faker/Pods-Faker.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -303,6 +309,7 @@
 		59CB20842779A40E00BD0400 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				CEB792172903E554003ACB01 /* Vip */,
 				596AF3AB277B79630026BD91 /* Toolbar */,
 				59CB20882779B22700BD0400 /* Purchase */,
 				5931289B278181A400E8DF1D /* Coupon */,
@@ -320,6 +327,7 @@
 				59841498277A16E200A4E858 /* PurchaseCategoryModel.swift */,
 				593128A5278184FA00E8DF1D /* CouponModel.swift */,
 				592C3DB3277DA1C000DAF7A0 /* GiftModel.swift */,
+				CEB792152903DC14003ACB01 /* VipModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -366,6 +374,7 @@
 				5984149A277A1A8A00A4E858 /* PurchaseAPI.swift */,
 				5931289C278181BC00E8DF1D /* CouponAPI.swift */,
 				592C3DB1277D9CE300DAF7A0 /* GiftAPI.swift */,
+				CEB792102903D8CD003ACB01 /* VipAPI.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -384,6 +393,14 @@
 				433FCF00BD944D12232927B4 /* Pods_Faker.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CEB792172903E554003ACB01 /* Vip */ = {
+			isa = PBXGroup;
+			children = (
+				CEB792182903E562003ACB01 /* VipListView.swift */,
+			);
+			path = Vip;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -562,6 +579,7 @@
 			files = (
 				59CB209B277AEC7300BD0400 /* FakerViewModel.swift in Sources */,
 				596AF3C1277DFC1C0026BD91 /* GiftView.swift in Sources */,
+				CEB792112903D8CD003ACB01 /* VipAPI.swift in Sources */,
 				59CB205C2779A3FA00BD0400 /* ContentView.swift in Sources */,
 				5984149D277A1BF200A4E858 /* FakerNetwork.swift in Sources */,
 				596AF3B2277BF6D80026BD91 /* SettingView.swift in Sources */,
@@ -584,6 +602,7 @@
 				59CB20872779AD6200BD0400 /* PurchaseCategoryView.swift in Sources */,
 				5931289A27817F4B00E8DF1D /* AccountListView.swift in Sources */,
 				593128A42781848F00E8DF1D /* CouponListRow.swift in Sources */,
+				CEB792162903DC14003ACB01 /* VipModel.swift in Sources */,
 				5984149F277A206B00A4E858 /* PurchaseCategoryViewModel.swift in Sources */,
 				596AF3AD277B79820026BD91 /* FakerToolbar.swift in Sources */,
 				5984149B277A1A8A00A4E858 /* PurchaseAPI.swift in Sources */,
@@ -592,6 +611,7 @@
 				59CB209F277AFCFA00BD0400 /* PurchaseHeader.swift in Sources */,
 				592C3DB2277D9CE300DAF7A0 /* GiftAPI.swift in Sources */,
 				596AF3B5277C0B5E0026BD91 /* SettingViewModel.swift in Sources */,
+				CEB792192903E562003ACB01 /* VipListView.swift in Sources */,
 				596AF3BB277DE94C0026BD91 /* GiftExchangeView.swift in Sources */,
 				59CB2097277AEA0900BD0400 /* PurchaseRow.swift in Sources */,
 				5931289D278181BD00E8DF1D /* CouponAPI.swift in Sources */,
@@ -757,7 +777,7 @@
 				CODE_SIGN_ENTITLEMENTS = Faker/Faker.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 20220102;
+				CURRENT_PROJECT_VERSION = 20221022;
 				DEVELOPMENT_ASSET_PATHS = "\"Faker/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -767,7 +787,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 12.0;
-				MARKETING_VERSION = 1.1.0;
+				MARKETING_VERSION = 1.2.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.jinchao1991.Faker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -784,7 +804,7 @@
 				CODE_SIGN_ENTITLEMENTS = Faker/Faker.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 20220102;
+				CURRENT_PROJECT_VERSION = 20221022;
 				DEVELOPMENT_ASSET_PATHS = "\"Faker/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -794,7 +814,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 12.0;
-				MARKETING_VERSION = 1.1.0;
+				MARKETING_VERSION = 1.2.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.jinchao1991.Faker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
