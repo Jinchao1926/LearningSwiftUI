@@ -20,7 +20,7 @@ class FakerViewModel: ObservableObject {
     //MARK:-
     func bulkAccountsLoading() {
         if let users = AccountViewModel.shared.readPlistUsers() {
-            print("bulk loading \(users.count) users")
+            debugPrint("bulk loading \(users.count) users")
             
             if let array = [UserViewModel].deserialize(from: users) {
                 self.users = array
@@ -28,11 +28,11 @@ class FakerViewModel: ObservableObject {
             return
         }
         
-        print("read plist error")
+        debugPrint("read plist error")
     }
     
     func bulkPurchasing(with category: PurchaseCategoryModel) {
-        print("[bulkPurchasing] interval: \(setting.intInterval), groupCount: \(setting.intGroupCount), groupInterval: \(setting.intGroupInterval)")
+        debugPrint("[bulkPurchasing] interval: \(setting.intInterval), groupCount: \(setting.intGroupCount), groupInterval: \(setting.intGroupInterval)")
         
         var isRelogin: Bool = false
         
@@ -41,7 +41,7 @@ class FakerViewModel: ObservableObject {
             
             for (idx, viewModel) in self.users.enumerated() {
                 viewModel?.purchase(category) { [weak self] state, relogin in
-                    print("state: \(state) relogin: \(relogin)")
+                    debugPrint("state: \(state) relogin: \(relogin)")
                     guard let self = self else { return }
                     
                     if state.isFinished {
@@ -62,7 +62,7 @@ class FakerViewModel: ObservableObject {
                 }
                 
                 // log
-                print("idx[\(idx)] purchase")
+                debugPrint("idx[\(idx)] purchase")
                 if idx == count - 1 {
                     print("bulk purchasing finished!")
                     return
@@ -70,7 +70,7 @@ class FakerViewModel: ObservableObject {
                 
                 // sleep
                 if (idx + 1) % self.setting.intGroupCount == 0 {
-                    print("grouping")
+                    debugPrint("grouping")
                     Thread.sleep(forTimeInterval: self.setting.intGroupInterval * 60)   // setting.groupInterval (mins)
                 }
                 else {
@@ -86,7 +86,7 @@ class FakerViewModel: ObservableObject {
             
         for (idx, viewModel) in self.users.enumerated() {
             viewModel?.coupon() { [weak self] state, relogin in
-                print("state: \(state) relogin: \(relogin)")
+                debugPrint("state: \(state) relogin: \(relogin)")
                 guard let self = self else { return }
                 
                 if state.isFinished {
@@ -107,9 +107,9 @@ class FakerViewModel: ObservableObject {
             }
             
             // log
-            print("idx[\(idx)] coupon")
+            debugPrint("idx[\(idx)] coupon")
             if idx == count - 1 {
-                print("bulk coupons finished!")
+                debugPrint("bulk coupons finished!")
                 return
             }
             

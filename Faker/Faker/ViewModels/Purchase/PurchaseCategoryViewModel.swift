@@ -34,7 +34,7 @@ class PurchaseCategoryViewModel: ObservableObject, FakerResponse {
                 }
                 
             case let .failure(error):
-                print("error:", error.errorDescription)
+                debugPrint("error:", error.errorDescription as Any)
                 break
             }
         }
@@ -56,7 +56,7 @@ class PurchaseCategoryViewModel: ObservableObject, FakerResponse {
                 
             case let .failure(error):
                 completion(nil)
-                print("error:", error.errorDescription)
+                debugPrint("error:", error.errorDescription as Any)
                 break
             }
         }

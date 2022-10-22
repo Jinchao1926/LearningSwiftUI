@@ -23,7 +23,7 @@ class CouponViewModel: ObservableObject, FakerResponse {
                 }
                 
             case let .failure(error):
-                print("error:", error.errorDescription)
+                debugPrint("error:", error.errorDescription as Any)
                 break
             }
         }

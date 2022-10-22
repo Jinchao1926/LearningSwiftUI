@@ -112,11 +112,11 @@ class GiftExchangeViewModel: ObservableObject, FakerResponse {
                 if let jsonDict = self?.format(response) {
                     if let d = jsonDict.0 {
                         // success
-                        print("response:", d)
+                        debugPrint("response:", d)
                         completion(.success, nil)
                     }
                     else {
-                        print("error:", jsonDict.2)
+                        debugPrint("error:", jsonDict.2 as Any)
                         completion(.failure, jsonDict.2)
                     }
                     return
@@ -142,11 +142,11 @@ class GiftExchangeViewModel: ObservableObject, FakerResponse {
         let current = Date()
         let component = Calendar.current.dateComponents([.second], from: current, to: targetDate!)
         if let second = component.second, Double(second) < 0.5 {
-            print("Times up!!!")
+            debugPrint("Times up!!!")
             doExchange()
             timer?.invalidate()
         }
-        print("current: \(current) target: \(targetDate!) seconds: \(String(describing: component.second))")
+        debugPrint("current: \(current) target: \(targetDate!) seconds: \(String(describing: component.second))")
     }
     
     

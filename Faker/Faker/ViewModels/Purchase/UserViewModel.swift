@@ -91,7 +91,6 @@ class UserViewModel: HandyJSON, FakerResponse {
                         }
                         return
                     }
-                    print("error:", obj.2)
                     completion(.failure, obj.2)
                     return
                 }
@@ -116,11 +115,11 @@ class UserViewModel: HandyJSON, FakerResponse {
                 if let jsonDict = self?.format(response) {
                     if let d = jsonDict.0 {
                         // success
-                        print("response:", d)
+                        debugPrint("response:", d)
                         completion(.success, nil)
                     }
                     else {
-                        print("error:", jsonDict.2)
+                        debugPrint("error:", jsonDict.2 as Any)
                         completion(.failure, jsonDict.2)
                     }
                     return
@@ -178,7 +177,7 @@ class UserViewModel: HandyJSON, FakerResponse {
                         completion(.success, nil)
                     }
                     else {
-                        print("error:", jsonDict["e"])
+                        debugPrint("error:", jsonDict["e"] as Any)
                         completion(.failure, jsonDict["e"] as? String)
                     }
                     return

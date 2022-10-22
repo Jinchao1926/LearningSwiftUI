@@ -35,7 +35,7 @@ class SettingViewModel: ObservableObject {
     }
     
     func synchronize() -> Bool {
-        print("interval: \(interval), groupCount: \(groupCount), groupInterval: \(groupInterval)")
+        debugPrint("interval: \(interval), groupCount: \(groupCount), groupInterval: \(groupInterval)")
         
         let standard = UserDefaults.standard
         standard.set(interval, forKey: "interval")

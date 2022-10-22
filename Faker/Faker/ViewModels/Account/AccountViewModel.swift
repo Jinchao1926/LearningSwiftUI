@@ -26,7 +26,7 @@ class AccountViewModel {
         
         // separate to lines
         let lines = data.components(separatedBy: "\n")
-        print("lines.count:", lines.count)
+        debugPrint("lines.count:", lines.count)
         
         let users: NSMutableArray = NSMutableArray()
         for (idx, line) in lines.enumerated() {
@@ -34,7 +34,7 @@ class AccountViewModel {
             let trimedLine = line.trimmingCharacters(in: .whitespacesAndNewlines)
             if trimedLine.count > 0 {
                 let array = trimedLine.components(separatedBy: " ")
-                print("[\(idx)] array:", array)
+                debugPrint("[\(idx)] array:", array)
                 
                 if array.count == 2 {
                     let keyValue = [ "phone": array[0], "password": array[1] ]
@@ -47,7 +47,7 @@ class AccountViewModel {
         }
         
         let path = self.path
-        print("errorLines:", errorLines)
+        debugPrint("errorLines:", errorLines)
         
         let ret = users.write(toFile: path, atomically: true)
         if ret {
