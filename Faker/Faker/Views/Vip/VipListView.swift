@@ -42,7 +42,7 @@ struct VipListView: View {
                     }
                 }
                 .listStyle(InsetListStyle())
-                .frame(minWidth: 600, idealWidth: 600, maxWidth: 600, minHeight: 500, idealHeight: 500, maxHeight: .infinity)
+                .frame(minWidth: 600, idealWidth: 700, maxWidth: .infinity, minHeight: 500, idealHeight: 500, maxHeight: .infinity)
             }
             .background(Color("GrayBackground"))
             .padding(5)
