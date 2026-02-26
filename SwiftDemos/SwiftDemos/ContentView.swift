@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ContentView: View {
-    private var demos = ["COW"]
+    private var demos = ["COW", "PropertyWrapper"]
     
     var body: some View {
         NavigationStack {
@@ -16,6 +16,8 @@ struct ContentView: View {
                 ForEach(demos.enumerated(), id: \.element) { idx, item in
                     if idx == 0 {
                         NavigationLink(item, destination: COWView())
+                    } else if idx == 1 {
+                        NavigationLink(item, destination: PropertyWrapperView())
                     }
                 }
             }

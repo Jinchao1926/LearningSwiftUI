@@ -20,7 +20,7 @@ enum FileError: Error {
 
 // throws：声明函数可能抛出错误
 func fetchData(from urlString: String) throws -> Data {
-    guard let url = URL(string: urlString) else {
+    guard let _ = URL(string: urlString) else {
         throw NetworkError.invalidURL
     }
     // ...
@@ -55,7 +55,7 @@ func fetch() throws(NetworkError) -> Data {
 func test2() {
     // 调用方 catch 分支无需类型转换
     do {
-        let data = try fetch()
+        let _ = try fetch()
     } catch {
         // error 的类型是 NetworkError（不是 any Error）
         switch error {
