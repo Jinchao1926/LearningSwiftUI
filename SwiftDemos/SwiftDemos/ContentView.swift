@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ContentView: View {
-    private var demos = ["COW", "PropertyWrapper"]
+    private var demos = ["COW", "PropertyWrapper", "Async"]
     
     var body: some View {
         NavigationStack {
@@ -18,6 +18,8 @@ struct ContentView: View {
                         NavigationLink(item, destination: COWView())
                     } else if idx == 1 {
                         NavigationLink(item, destination: PropertyWrapperView())
+                    } else if idx == 2 {
+                        NavigationLink(item, destination: AsyncView())
                     }
                 }
             }
