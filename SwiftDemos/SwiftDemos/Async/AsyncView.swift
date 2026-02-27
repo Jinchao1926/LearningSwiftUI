@@ -12,20 +12,17 @@ struct AsyncView: View {
     private let cache = DataCache()
     
     var body: some View {
-        Button("Test Actor") {
-            testActor()
+        List {
+            Button("Test Actor") {
+                testActor()
+            }
+            Button("Test Non Actor") {
+                testNonActor()
+            }
+            Button("Test Actor Nonisolated") {
+                testActorNonisolated()
+            }
         }
-        .padding()
-        
-        Button("Test Non Actor") {
-            testNonActor()
-        }
-        .padding()
-        
-        Button("Test Actor Nonisolated") {
-            testActorNonisolated()
-        }
-        .padding()
     }
     
     private func testActor() {

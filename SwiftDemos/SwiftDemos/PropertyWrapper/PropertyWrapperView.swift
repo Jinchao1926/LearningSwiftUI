@@ -14,31 +14,37 @@ struct PropertyWrapperView: View {
     let tester = ArrayBuilderTester()
     
     var body: some View {
-        VStack {
-            Button("Switch to Dark") {
-                isDarkMode = true
+        List {
+            HStack {
+                Button("Switch to Dark") {
+                    isDarkMode = true
+                }
+                Spacer()
+                Button("Switch to White") {
+                    isDarkMode = false
+                }
             }
-            .padding()
-            
-            Button("Switch to White") {
-                isDarkMode = false
+            .onReceive($isDarkMode) { newValue in
+                debugPrint("isDarkMode changed to \(newValue)")
             }
-            .padding()
             
             Button("Result Builder") {
                 debugPrint("Build numbers: ", tester.buildNumbers())
-                
                 debugPrint("Build: ", tester.build(showBonus: false))
             }
-            .padding()
+            
+            LoginView()
+                .frame(maxWidth: .infinity, alignment: .center)
+            
+            ParentToggleView()
+                .frame(maxWidth: .infinity, alignment: .center)
+            
+            AppView()
+                .frame(maxWidth: .infinity, alignment: .center)
         }
         .navigationTitle("Property Wrapper")
-        .onReceive($isDarkMode) { newValue in
-            debugPrint("isDarkMode changed to \(newValue)")
-        }
+        .environmentObject(AppState())
     }
-    
-    
 }
 
 #Preview {
