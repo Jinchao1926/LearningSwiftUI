@@ -51,8 +51,6 @@ struct ArrayBuilder<T> {
     static func buildEither(second component: [T]) -> [T] { component }
 }
 
-
-
 struct ArrayBuilderTester {
     func makeArray<T>(@ArrayBuilder<T> _ content: () -> [T]) -> [T] {
          content()
@@ -68,6 +66,26 @@ struct ArrayBuilderTester {
     func build(showBonus: Bool) -> [Int] {
         let score = 90
 
+        /**
+         编译器实际展开的逻辑（伪代码）
+         let e1 = ArrayBuilder.buildExpression(1)   // [1]
+         let e2 = ArrayBuilder.buildExpression(2)   // [2]
+         let e3 = ArrayBuilder.buildExpression(3)   // [3]
+
+         // if showBonus { 99 } → buildOptional
+         let e4 = showBonus
+             ? ArrayBuilder.buildOptional(ArrayBuilder.buildExpression(99))  // [99]
+             : ArrayBuilder.buildOptional(nil)                               // []
+
+         // if score >= 60 { 100 } else { 0 } → buildEither
+         let e5 = score >= 60
+             ? ArrayBuilder.buildEither(first: ArrayBuilder.buildExpression(100))   // [100]
+             : ArrayBuilder.buildEither(second: ArrayBuilder.buildExpression(0))    // [0]
+
+         // buildBlock 把所有分量合并
+         return ArrayBuilder.buildBlock(e1, e2, e3, e4, e5)
+         // flatMap → [1, 2, 3, 99, 100]
+         */
         let result = makeArray {
             // buildExpression 把每个 Int 包装成 [Int]
             1
