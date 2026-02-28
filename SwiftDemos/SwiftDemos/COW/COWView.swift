@@ -9,16 +9,13 @@ import SwiftUI
 
 struct COWView: View {
     var body: some View {
-        VStack {
+        List {
             Button("Copy-on-Write") {
                 testCopyOnWrite()
             }
-            .padding()
-            
             Button("Copy-on-Write MyArray") {
                 testCopyOnWriteMyArray()
             }
-            .padding()
         }
         .navigationTitle("COW")
     }
